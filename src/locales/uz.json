@@ -1,0 +1,39 @@
+{
+  "title": "Mening <1>Mutaxassisligim</1>",
+  "cards": {
+    "software": {
+      "title": "Dasturiy <1>Ta’minot</1>",
+      "text": "Java, Python, JavaScript va C++ tillarida OOP va funksional dasturlash bo‘yicha tajribaga ega. Algoritmlar va masalalarni yechishda mustahkam bilimga ega."
+    },
+    "fullstack": {
+      "title": "Full Stack <1>Dasturlash</1>",
+      "text": "React, Next.js, Node.js va Express yordamida moslashuvchan veb-ilovalar yaratish. REST API, autentifikatsiya va real-time integratsiyalar bo‘yicha ko‘nikmalarga ega."
+    },
+    "database": {
+      "title": "Ma’lumotlar <1>Bazalari</1>",
+      "text": "PostgreSQL, MongoDB va SQL bo‘yicha bilimli. Ma’lumotlar sxemalarini loyihalash, so‘rovlarni optimallashtirish va ma’lumotlar yaxlitligini ta’minlashda tajribaga ega."
+    }
+  },
+  "hero__title": "Dastur muhandisi & Veb dasturchi",
+  "home": "// bosh sahifa",
+  "expertise": "// tajriba",
+  "work": "// ishlar",
+  "contacts": "// aloqa",
+  "link": "Loyihani ko‘rish",
+  "works": {
+    "title": "Mening Ishlarim",
+    "showProject": "Loyihani ko‘rish",
+    "project1": {
+      "title": "Eco Life Etiqo'd",
+      "description": "Eco-Life Etiqod — bu sog‘lomlashtirish kurorti veb-sayti bo‘lib, tabiiy buloq suvi, shved stoli va qulay oilaviy muhitni namoyish etadi. U zamonaviy dizayn va silliq animatsiyalarga ega ko‘p sahifali moslashuvchan maket bilan yaratilgan. HTML, CSS, JavaScript va React yordamida qurilgan bo‘lib, barcha qurilmalarda qulay tajriba taqdim etadi."
+    },
+    "project2": {
+      "title": "Mazzo Premium",
+      "description": "Mazzo Premium — bu nafis vizuallar va qulay navigatsiya bilan premium mahsulotlarni taqdim etuvchi zamonaviy e-commerce sayti. HTML, CSS, JavaScript va React yordamida yaratilgan bo‘lib, foydalanuvchilarga qulay va moslashuvchan tajriba beradi."
+    }
+  },
+  "footer": {
+    "title": "Freelance loyihalar uchun mavjudman",
+    "description": "Qiziqarli loyiha bormi? Menga email yuboring yoki messenjerlar orqali bog‘laning!"
+  }
+}

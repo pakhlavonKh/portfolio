@@ -1,0 +1,40 @@
+{
+  "title": "My <1>Expertise</1>",
+  "cards": {
+    "software": {
+      "title": "Software <1>Development</1>",
+      "text": "Experienced in OOP and functional programming with Java, Python, JavaScript, and C++. Strong foundation in algorithms and problem-solving."
+    },
+    "fullstack": {
+      "title": "Full Stack <1>Development</1>",
+      "text": "Building responsive web apps using React, Next.js, Node.js, and Express. Skilled in REST APIs, authentication, and real-time integrations."
+    },
+    "database": {
+      "title": "Database <1>Systems</1>",
+      "text": "Proficient in PostgreSQL, MongoDB, and SQL. Experience designing relational schemas, optimizing queries, and ensuring data integrity."
+    }
+  },
+  "hero__title": "Software Engineer & Web Developer",
+  "home": "// home",
+  "expertise": "// expertise",
+  "work": "// work",
+  "contacts": "// contact",
+  "link": "Show project",
+  "works": {
+    "title": "My",
+    "highlight": "Work",
+    "showProject": "Show project",
+    "project1": {
+      "title": "Eco Life Etiqo'd",
+      "description": "Eco-Life Etiqod is a wellness resort website showcasing natural spring water, buffet dining, and a cozy family-friendly atmosphere. It features a responsive multi-page layout with modern design and smooth interactions. Built with HTML, CSS, JavaScript, and React, the project delivers an engaging user experience across all devices."
+    },
+    "project2": {
+      "title": "Mazzo Premium",
+      "description": "Mazzo Premium is an elegant e-commerce showcase featuring premium products, styled with refined visuals and intuitive navigation. Built using HTML, CSS, JavaScript, and React, the site delivers a seamless, responsive user experience."
+    }
+  },
+  "footer": {
+    "title": "Available for freelance opportunities",
+    "description": "Have an exciting project you need help with? Send me an email or contact me via instant message!"
+  }
+}

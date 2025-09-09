@@ -1,0 +1,39 @@
+{
+  "title": "Benim <1>Uzmanlığım</1>",
+  "cards": {
+    "software": {
+      "title": "Yazılım <1>Geliştirme</1>",
+      "text": "Java, Python, JavaScript ve C++ ile OOP ve fonksiyonel programlama deneyimi. Algoritmalar ve problem çözmede güçlü bir temele sahip."
+    },
+    "fullstack": {
+      "title": "Full Stack <1>Geliştirme</1>",
+      "text": "React, Next.js, Node.js ve Express ile duyarlı web uygulamaları geliştirme. REST API, kimlik doğrulama ve gerçek zamanlı entegrasyonlarda yetkin."
+    },
+    "database": {
+      "title": "Veritabanı <1>Sistemleri</1>",
+      "text": "PostgreSQL, MongoDB ve SQL konusunda yetkin. İlişkisel şemalar tasarlama, sorguları optimize etme ve veri bütünlüğünü sağlama deneyimine sahip."
+    }
+  },
+  "hero__title": "Yazılım Mühendisi & Web Geliştirici",
+  "home": "// ana sayfa",
+  "expertise": "// uzmanlık",
+  "work": "// projeler",
+  "contacts": "// iletişim",
+  "link": "Projeyi Görüntüle",
+  "works": {
+    "title": "Benim Çalışmalarım",
+    "showProject": "Projeyi Görüntüle",
+    "project1": {
+      "title": "Eco Life Etiqo'd",
+      "description": "Eco-Life Etiqod, şifalı kaynak suyu, açık büfe yemekler ve sıcak aile ortamını tanıtan bir sağlık tesisi web sitesidir. Modern tasarım ve akıcı animasyonlarla çok sayfalı duyarlı bir düzen sunar. HTML, CSS, JavaScript ve React ile geliştirilmiş olup, tüm cihazlarda keyifli bir kullanıcı deneyimi sağlar."
+    },
+    "project2": {
+      "title": "Mazzo Premium",
+      "description": "Mazzo Premium, zarif görseller ve sezgisel gezinme ile premium ürünleri tanıtan şık bir e-ticaret vitrinidir. HTML, CSS, JavaScript ve React ile oluşturulmuştur ve sorunsuz, duyarlı bir kullanıcı deneyimi sunar."
+    }
+  },
+  "footer": {
+    "title": "Freelance projeler için uygunum",
+    "description": "Yardımcı olmamı istediğiniz heyecan verici bir projeniz mi var? Bana e-posta gönderin veya anlık mesajla iletişime geçin!"
+  }
+}
