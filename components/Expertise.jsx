@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Laptop, Network, Database } from "lucide-react";
 import { useTranslation, Trans } from "react-i18next";
+import binary from "/public/assets/binary.png";
 
 function Expertise() {
   const ref = useRef(null);
@@ -86,7 +87,7 @@ function Expertise() {
       </div>
 
       <div className="expertise__image-container">
-        <img src="/public/assets/binary.png" alt="binary code" className="expertise__image" />
+        <img src={binary} alt="binary code" className="expertise__image" />
       </div>
     </section>
   );
