@@ -19,7 +19,7 @@ function getInitialLang() {
   return "en";
 }
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ className="" }) {
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(getInitialLang);
   const switcherRef = useRef(null);
@@ -67,7 +67,7 @@ export default function LanguageSwitcher() {
   }, [open]);
 
   return (
-    <div className="lang-switcher" ref={switcherRef}>
+    <div className={`lang-switcher ${className}`} ref={switcherRef}>
       <button className="lang-button" onClick={() => setOpen((o) => !o)}>
         {LANGS.find((l) => l.code === lang)?.flag}{" "}
         {LANGS.find((l) => l.code === lang)?.native}

@@ -86,7 +86,7 @@ function Expertise() {
       </div>
 
       <div className="expertise__image-container">
-        <img src="/src/assets/binary.png" alt="binary code" className="expertise__image" />
+        <img src="/public/assets/binary.png" alt="binary code" className="expertise__image" />
       </div>
     </section>
   );

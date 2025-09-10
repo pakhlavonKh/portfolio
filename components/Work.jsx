@@ -34,7 +34,7 @@ function Work() {
 
       <div className="work__cards">
         <div className="work__card work__card--1">
-          <img src="/src/assets/project1.png" alt="project 1" className="work__card-image"/>
+          <img src="/public/assets/project1.png" alt="project 1" className="work__card-image"/>
           <div className="work__card-text">
             <h3 className="work__card-title">{t("works.project1.title")}</h3>
             <p className="work__card-description">{t("works.project1.description")}</p>
@@ -45,7 +45,7 @@ function Work() {
         </div>
 
         <div className="work__card work__card--2">
-          <img src="/src/assets/project2.png" alt="project 2" className="work__card-image" />
+          <img src="/public/assets/project2.png" alt="project 2" className="work__card-image" />
           <div className="work__card-text">
             <h3 className="work__card-title">{t("works.project2.title")}</h3>
             <p className="work__card-description">{t("works.project2.description")}</p>

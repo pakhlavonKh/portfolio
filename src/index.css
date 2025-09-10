@@ -87,6 +87,7 @@ button:hover {
 .first {
   color: #00adb5;
   z-index: 2;
+  font-weight: 600;
 }
 
 .rest {
@@ -203,6 +204,10 @@ button:hover {
   color: #ccc;
 }
 
+.navigation {
+  display: none;
+}
+
 .navigation__button {
   display: none;
   background-color: #fff;
@@ -260,7 +265,7 @@ button:hover {
   transform: rotate(-135deg);
 }
 
-.navigation__checkbox:checked ~ .headerNav {
+.navigation__checkbox:checked ~ .navigation {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -268,93 +273,81 @@ button:hover {
   right: 0;
   width: 100%;
   height: 100vh;
-  opacity: 1;
   background-color: #fff;
-  color: #05133D;
-  text-align: center;
   z-index: 50;
+  justify-content: center;
+  align-items: center;
 }
 
-.navigation__checkbox:checked ~ .headerNav li a {
+
+.navigation__checkbox:checked ~ .navigation .navigation__list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navigation__checkbox:checked ~ .navigation .navigation__list li a {
   font-size: 3rem;
-  padding: 2rem;
+  padding: 1rem;
   color: #05133D;
-}
-
-.navigation__checkbox:checked ~ .headerNav li a {
   transform: translateX(0);
+  text-decoration: none;
   opacity: 1;
   transition: all 0.4s ease;
 }
-.navigation__checkbox:checked ~ .headerNav li:nth-child(1) a { transition-delay: 0.1s; }
-.navigation__checkbox:checked ~ .headerNav li:nth-child(2) a { transition-delay: 0.2s; }
-.navigation__checkbox:checked ~ .headerNav li:nth-child(3) a { transition-delay: 0.3s; }
+.navigation__checkbox:checked ~ .navigation .navigation__list li{
+  margin: 1rem;
+}
+
+.navigation__checkbox:checked ~ .navigation .navigationLang {
+  display: flex;
+  margin: 0.5rem auto;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: #05133D;
+}
+
+
+.navigation__checkbox:checked ~ .navigation .navigationLang .lang-button {
+  display: flex;
+  margin: 0.5rem auto;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: #05133D;
+}
+
+.navigation__checkbox:checked ~ .navigation__list li:nth-child(1) a { transition-delay: 0.1s; }
+.navigation__checkbox:checked ~ .navigation__list li:nth-child(2) a { transition-delay: 0.2s; }
+.navigation__checkbox:checked ~ .navigation__list li:nth-child(3) a { transition-delay: 0.3s; }
 .lang-switcher {
   position: relative;
   display: inline-block;
   font-family: system-ui, sans-serif;
 }
 
-.navigation__checkbox:checked ~ .lang-switcher {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem auto;
-}
-
-  
- .navigation__checkbox:checked ~ .lang-switcher .lang-button {
-  display: flex;
-  position: static;
-  margin: 1.5rem auto;
-  font-size: 2rem;
-  justify-content: center;
-  align-items: center;
-  color: #05133D;
-  z-index: 100;
-}
 
 
-.navigation__checkbox:checked ~ .lang-switcher .lang-option {
+.navigation__checkbox:checked ~ .navigation .navigationLang .lang-option {
   display: block;
   background: #fff;
   color: #05133D;
   font-size: 1.6rem;
   padding: 0.8rem 1.2rem;
 }
-.navigation__checkbox:checked ~ .lang-switcher {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 65%;   
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 60;
-}
 
 .navigation__checkbox:checked ~ .lang-switcher .lang-menu {
   text-align: center;
 }
 
-.navigation__checkbox:checked ~ .lang-switcher .lang-button {
-  display: flex;
-  position: static;
-  margin: 1.5rem auto;
-  font-size: 2rem;
-  justify-content: center;
-  align-items: center;
-  color: #05133D;
-  z-index: 100;
-}
 
 .lang-button {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 0.8rem;
-  background: transparent; /* dark slate */
+  background: transparent; 
   color: #f1f5f9;
   border: 1px solid #334155;
   cursor: pointer;
@@ -426,7 +419,7 @@ button:hover {
   align-items: center;
   padding: 0 2rem;
   text-align: center;
-  background-image: url(./assets/bg-3.png);
+  background-image: url(/public/assets/bg-3.png);
   background-repeat: no-repeat;
   background-position: center;   
   background-size:contain;  
@@ -891,6 +884,10 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+  .hamidov, .akhlavon {
+    display: flex;
+  }
+
   .hero {
     background-size: cover;
   }
@@ -903,15 +900,12 @@ button:hover {
     font-size: 2.5rem;
   }
 
-  .headerNav ul li a {
-    
+  .navigation__list ul li a {
     transform: translateX(100%); 
     opacity: 0;
-    
-
   }
 
-  .headerNav li a::before {
+  .navigation__list li a::before {
     position: absolute;
     left: -100%;
     top: 50%;
@@ -921,6 +915,10 @@ button:hover {
     font-weight: 600;
     opacity: 1;
     color: #05133D;
+  }
+
+  .lang-switcher {
+    display: none;
   }
 
   .lang-button {

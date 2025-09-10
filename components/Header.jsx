@@ -53,6 +53,16 @@ function Header() {
       <label htmlFor="nav-toggle" className="navigation__button">
         <span className={`navigation__icon ${isOpen ? 'open' : ''}`}>&nbsp;</span>
       </label>
+      <div className="navigation">
+        <ul className="navigation__list">
+          <li><a href="#hero" onClick={() => setIsOpen(false)}>{t("home")}</a></li>
+          <li><a href="#expertise" onClick={() => setIsOpen(false)}>{t("expertise")}</a></li>
+          <li><a href="#work" onClick={() => setIsOpen(false)}>{t("work")}</a></li>
+          <li><a href="#contacts" onClick={() => setIsOpen(false)}>{t("contacts")}</a></li>
+        </ul>
+        <LanguageSwitcher  className="navigationLang"/>
+      </div>
+
       <ul className={`headerNav ${isFixed ? 'fixed' : ""}`}>
         <li><a href="#hero" onClick={() => setIsOpen(false)}>{t("home")}</a></li>
         <li><a href="#expertise" onClick={() => setIsOpen(false)}>{t("expertise")}</a></li>
