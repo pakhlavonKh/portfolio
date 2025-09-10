@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslation, Trans } from "react-i18next";
-import project1 from "/public/assets/project1.png";
-import project2 from "/public/assets/project2.png";
+import project1 from "/public/assets/project1.webp";
+import project2 from "/public/assets/project2.webp";
 
 function Work() {
   const ref = useRef(null);

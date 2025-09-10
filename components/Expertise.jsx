@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Laptop, Network, Database } from "lucide-react";
 import { useTranslation, Trans } from "react-i18next";
-import binary from "/public/assets/binary.png";
+import binary from "/public/assets/binary.webp";
 
 function Expertise() {
   const ref = useRef(null);
