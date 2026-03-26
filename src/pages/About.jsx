@@ -1,0 +1,106 @@
+import React, { useRef, useEffect, useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
+import binary from '/public/assets/binary.webp';
+import { Code, Globe, Server } from 'lucide-react';
+
+function About() {
+  const { t } = useTranslation();
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <main>
+      <section
+        ref={ref}
+        className={`expertise ${isVisible ? 'in-view' : ''}`}
+        id="expertise"
+      >
+        <h2 className="expertise__title">
+          <Trans i18nKey="title">
+            My <span>Expertise</span>
+          </Trans>
+        </h2>
+
+        <div className="expertise__cards">
+          <div className="expertise__card expertise__card--1">
+            <div className="expertise__headline">
+              <Code
+                className="expertise__icon"
+                title="Code / Software Development"
+                strokeWidth={1.5}
+                size={32}
+              />
+              <h3>
+                <Trans i18nKey="cards.software.title">
+                  Software <span>Development</span>
+                </Trans>
+              </h3>
+            </div>
+            <div className="expertise__text">
+              <p>{t('cards.software.text')}</p>
+            </div>
+          </div>
+
+          <div className="expertise__card expertise__card--2">
+            <div className="expertise__headline">
+              <Globe
+                className="expertise__icon"
+                title="Full Stack Development"
+                strokeWidth={1.5}
+                size={32}
+              />
+              <h3>
+                <Trans i18nKey="cards.fullstack.title">
+                  Full Stack <span>Development</span>
+                </Trans>
+              </h3>
+            </div>
+            <div className="expertise__text">
+              <p>{t('cards.fullstack.text')}</p>
+            </div>
+          </div>
+
+          <div className="expertise__card expertise__card--3">
+            <div className="expertise__headline">
+              <Server
+                className="expertise__icon"
+                title="Database Systems"
+                strokeWidth={1.5}
+                size={32}
+              />
+              <h3>
+                <Trans i18nKey="cards.database.title">
+                  Database <span>Systems</span>
+                </Trans>
+              </h3>
+            </div>
+            <div className="expertise__text">
+              <p>{t('cards.database.text')}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="expertise__image-container">
+          <img src={binary} alt="binary code" className="expertise__image" />
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export default About;

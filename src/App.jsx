@@ -1,9 +1,12 @@
 import React, {useEffect} from 'react'
-import Header from '/components/Header'
-import Footer from '/components/Footer'
-import Hero from '../components/Hero'
-import Expertise from '../components/Expertise';
-import Work from '../components/Work';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
+import Home from './pages/Home'
+import About from './pages/About'
+import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -16,16 +19,21 @@ function App() {
       window.addEventListener("mousemove", handleMouseMove);
       return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
+  
   return (
-    <>
-      <Header />
-
-      <Hero />
-      <Expertise />
-      <Work />
-      
-      <Footer />
-    </>
+    <div className="app-wrapper">
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   )
 }
 

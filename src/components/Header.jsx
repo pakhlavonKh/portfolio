@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 function Header() {
   const [isFixed, setIsFixed] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,12 +39,12 @@ function Header() {
   
   return (
     <header className="header">
-      <div className="name-wrapper">
+      <Link to="/" className="name-wrapper">
         <span className="first">K</span>
         <span className="rest hamidov">hamidov</span>
         <span className="first letter-p">P</span>
         <span className="rest akhlavon">akhlavon</span>
-      </div>
+      </Link>
       <input
         type="checkbox"
         id="nav-toggle"
@@ -55,23 +57,24 @@ function Header() {
       </label>
       <div className="navigation">
         <ul className="navigation__list">
-          <li><a href="#hero" onClick={() => setIsOpen(false)}>{t("home")}</a></li>
-          <li><a href="#expertise" onClick={() => setIsOpen(false)}>{t("expertise")}</a></li>
-          <li><a href="#work" onClick={() => setIsOpen(false)}>{t("work")}</a></li>
-          <li><a href="#contacts" onClick={() => setIsOpen(false)}>{t("contacts")}</a></li>
+          <li><Link to="/" onClick={() => setIsOpen(false)}>{t("home")}</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>{t("expertise")}</Link></li>
+          <li><Link to="/portfolio" onClick={() => setIsOpen(false)}>{t("work")}</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)}>{t("contacts")}</Link></li>
         </ul>
         <LanguageSwitcher  className="navigationLang"/>
       </div>
 
       <ul className={`headerNav ${isFixed ? 'fixed' : ""}`}>
-        <li><a href="#hero" onClick={() => setIsOpen(false)}>{t("home")}</a></li>
-        <li><a href="#expertise" onClick={() => setIsOpen(false)}>{t("expertise")}</a></li>
-        <li><a href="#work" onClick={() => setIsOpen(false)}>{t("work")}</a></li>
-        <li><a href="#contacts" onClick={() => setIsOpen(false)}>{t("contacts")}</a></li>
+        <li><Link to="/" onClick={() => setIsOpen(false)}>{t("home")}</Link></li>
+        <li><Link to="/about" onClick={() => setIsOpen(false)}>{t("expertise")}</Link></li>
+        <li><Link to="/portfolio" onClick={() => setIsOpen(false)}>{t("work")}</Link></li>
+        <li><Link to="/contact" onClick={() => setIsOpen(false)}>{t("contacts")}</Link></li>
       </ul>
       <LanguageSwitcher />
     </header>
   );
 }
+
 
 export default Header;

@@ -36,5 +36,25 @@
   "footer": {
     "title": "Available for freelance opportunities",
     "description": "Have an exciting project you need help with? Send me an email or contact me via instant message!"
+  },
+  "contact": {
+    "title": "Get in <1>Touch</1>",
+    "subtitle": "I'd love to hear from you. Send me a message and I'll respond as soon as possible.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Your Email",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project Inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or inquiry...",
+      "send": "Send Message",
+      "success": "✓ Message sent successfully! I'll get back to you soon.",
+      "error": "✗ Please fill in all required fields."
+    }
   }
 }

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --bg-gradient: linear-gradient(135deg, #0F172A, #05133D);
+  --bg-gradient: linear-gradient(135deg, #0a0d1a 0%, #050811 25%, #0d0a1f 50%, #0a051a 75%, #050811 100%);
   --accent: #64ffda;
   --text-light: #f5f5f5;
   --text-muted: #94a3b8;
@@ -25,20 +25,28 @@ html, body {
 
 body {
   font-family: var(--font-main);
-  background: var(--bg-gradient);
   color: var(--text-light);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: 
-    radial-gradient(
-      circle 200rem at var(--x, 50%) var(--y, 50%),
-      rgba(255, 255, 255, 0.08) 0%,
-      transparent 8%
-    ),
-    linear-gradient(135deg, #1a1a2e, #16213e);
+  background: linear-gradient(-45deg, #0a0d1a 0%, #050811 20%, #0a051a 40%, #0d0a2a 60%, #050811 80%, #0a0d1a 100%);
   background-attachment: fixed;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  z-index: 1;
 }
 
 a {
@@ -74,6 +82,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  z-index: 10;
 }
 
 .name-wrapper {
@@ -419,7 +428,7 @@ button:hover {
   align-items: center;
   padding: 0 2rem;
   text-align: center;
-  background-image: url(/public/assets/bg-3.webp);
+  /* background-image: url(/public/assets/bg-3.webp); */
   background-repeat: no-repeat;
   background-position: center;   
   background-size:contain;  
@@ -740,6 +749,8 @@ button:hover {
   flex-direction: row;
   justify-content: space-around;
   text-align: left;
+  position: relative;
+  z-index: 5;
 }
 
 .footer__text {
@@ -992,3 +1003,247 @@ button:hover {
   0% { transform: translateX(100px); opacity: 0;}
   100% { transform: translateX(0); opacity: 1;}
 }
+
+/* =============== CONTACT SECTION =============== */
+.contact {
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 6rem;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.contact__title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.contact__title span {
+  color: var(--accent);
+}
+
+.contact__subtitle {
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  max-width: 60rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* Contact Info */
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact__item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.contact__item:nth-child(1) { animation-delay: 0.1s; }
+.contact__item:nth-child(2) { animation-delay: 0.2s; }
+.contact__item:nth-child(3) { animation-delay: 0.3s; }
+
+.contact__icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+
+.contact__item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact__item a,
+.contact__item p {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.contact__item a {
+  cursor: pointer;
+}
+
+.contact__item a:hover {
+  color: var(--accent);
+}
+
+/* Contact Form */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form__group label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.form__group input,
+.form__group textarea {
+  padding: 1.2rem 1.5rem;
+  border: 2px solid rgba(100, 255, 218, 0.2);
+  background-color: rgba(100, 255, 218, 0.05);
+  border-radius: 0.8rem;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form__group input::placeholder,
+.form__group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: var(--accent);
+  background-color: rgba(100, 255, 218, 0.1);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
+}
+
+.form__group textarea {
+  resize: vertical;
+  min-height: 15rem;
+}
+
+.form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.3rem 2.5rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #38e3c9 100%);
+  color: #0a0d1a;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.form__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+}
+
+.form__button:active {
+  transform: translateY(0);
+}
+
+.form__message {
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.form__message--success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+.form__message--error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #FF6B6B;
+  border: 2px solid #FF6B6B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact__header {
+    margin-bottom: 4rem;
+  }
+
+  .contact__title {
+    font-size: 2.5rem;
+  }
+
+  .contact__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact__item {
+    gap: 1.5rem;
+  }
+
+  .contact__item h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact__item a,
+  .contact__item p {
+    font-size: 1.4rem;
+  }
+
+  .form__group input,
+  .form__group textarea {
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .form__button {
+    padding: 1.1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
