@@ -1,16 +1,26 @@
 {
-  "title": "My <1>Expertise</1>",
+  "title": "My Expertise",
+  "titleHighlight": "Expertise",
   "cards": {
     "software": {
-      "title": "Software <1>Development</1>",
+      "prefix": "Software",
+      "title": "Software Development",
+      "titleHighlight": "Development",
+      "icon": "Code / Software Development",
       "text": "Experienced in OOP and functional programming with Java, Python, JavaScript, and C++. Strong foundation in algorithms and problem-solving."
     },
     "fullstack": {
-      "title": "Full Stack <1>Development</1>",
+      "prefix": "Full Stack",
+      "title": "Full Stack Development",
+      "titleHighlight": "Development",
+      "icon": "Full Stack Development",
       "text": "Building responsive web apps using React, Next.js, Node.js, and Express. Skilled in REST APIs, authentication, and real-time integrations."
     },
     "database": {
-      "title": "Database <1>Systems</1>",
+      "prefix": "Database",
+      "title": "Database Systems",
+      "titleHighlight": "Systems",
+      "icon": "Database Systems",
       "text": "Proficient in PostgreSQL, MongoDB, and SQL. Experience designing relational schemas, optimizing queries, and ensuring data integrity."
     }
   },
@@ -21,8 +31,8 @@
   "contacts": "// contact",
   "link": "Show project",
   "works": {
-    "title": "My",
-    "highlight": "Work",
+    "title": "My Work",
+    "titleHighlight": "Work",
     "showProject": "Show project",
     "project1": {
       "title": "Eco Life Etiqo'd",
@@ -38,11 +48,15 @@
     "description": "Have an exciting project you need help with? Send me an email or contact me via instant message!"
   },
   "contact": {
-    "title": "Get in <1>Touch</1>",
+    "title": "Get in Touch",
+    "titleHighlight": "Touch",
     "subtitle": "I'd love to hear from you. Send me a message and I'll respond as soon as possible.",
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
+    "address": "Tashkent, Uzbekistan",
+    "emailAddress": "pakhlavon.khamidov@gmail.com",
+    "phoneNumber": "+998 (90) 123-45-67",
     "form": {
       "name": "Your Name",
       "namePlaceholder": "John Doe",
@@ -55,6 +69,53 @@
       "send": "Send Message",
       "success": "✓ Message sent successfully! I'll get back to you soon.",
       "error": "✗ Please fill in all required fields."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Khamidov Pakhlavon",
+    "hero": {
+      "title": "About Me",
+      "description": "I design and build complete digital systems — from interfaces to backend architecture — focusing on performance, scalability, and clean interaction."
+    },
+    "expertise": {
+      "title": "My Expertise",
+      "titleHighlight": "Expertise",
+      "software": {
+        "title": "Software Engineering",
+        "description": "Writing structured, maintainable code with focus on performance, scalability, and clean architecture. I specialize in Object-Oriented and Functional programming paradigms across Java, Python, JavaScript, and C++, with strong foundations in data structures, algorithms, and design patterns."
+      },
+      "fullstack": {
+        "title": "Full Stack Development",
+        "description": "Building complete web applications — from responsive UI to backend services and APIs. I create seamless experiences using React and Next.js for frontends, paired with Node.js and Express backends, handling everything from state management to deployment."
+      },
+      "backend": {
+        "title": "Backend & APIs",
+        "description": "Designing REST APIs, implementing complex business logic, and integrating third-party services. My backend expertise covers authentication systems, database optimization, error handling, and building scalable service architectures."
+      },
+      "systems": {
+        "title": "System Design",
+        "description": "Structuring full systems with attention to data flow, architecture decisions, and modular design patterns. I focus on creating systems that scale efficiently while maintaining code clarity and separation of concerns."
+      },
+      "applications": {
+        "title": "Application Development",
+        "description": "Creating functional applications with real-world use cases, integrating UI components, business logic, and user interaction flows into cohesive solutions that solve actual problems."
+      },
+      "database": {
+        "title": "Data & Storage",
+        "description": "Working with both relational and NoSQL databases, designing efficient schemas, optimizing queries, and managing data access patterns. Proficient in PostgreSQL, MongoDB, and SQL with experience in data integrity and performance tuning."
+      }
+    },
+    "process": {
+      "title": "How I Work",
+      "step1": "01. Thinking",
+      "step1_desc": "Understanding the problem, requirements, and defining clear system structure before writing any code.",
+      "step2": "02. Designing",
+      "step2_desc": "Planning architecture, UI/UX flow, and data models. Creating blueprints that guide development.",
+      "step3": "03. Building",
+      "step3_desc": "Implementing clean, scalable, and efficient code while maintaining best practices and documentation.",
+      "step4": "04. Refining",
+      "step4_desc": "Optimizing performance, testing thoroughly, and improving user experience based on feedback."
     }
   }
 }

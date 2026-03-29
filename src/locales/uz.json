@@ -1,16 +1,26 @@
 {
-  "title": "Mening <1>Mutaxassisligim</1>",
+  "title": "Mening Mutaxassisligim",
+  "titleHighlight": "Mutaxassisligim",
   "cards": {
     "software": {
-      "title": "Dasturiy <1>Ta’minot</1>",
-      "text": "Java, Python, JavaScript va C++ tillarida OOP va funksional dasturlash bo‘yicha tajribaga ega. Algoritmlar va masalalarni yechishda mustahkam bilimga ega."
+      "prefix": "Dasturiy",
+      "title": "Dasturiy Ta'minot",
+      "titleHighlight": "Ta'minot",
+      "icon": "Kod / Dasturiy Ta'minot",
+      "text": "Java, Python, JavaScript va C++ tillarida OOP va funksional dasturlash bo'yicha tajribaga ega. Algoritmlar va masalalarni yechishda mustahkam bilimga ega."
     },
     "fullstack": {
-      "title": "Full Stack <1>Dasturlash</1>",
-      "text": "React, Next.js, Node.js va Express yordamida moslashuvchan veb-ilovalar yaratish. REST API, autentifikatsiya va real-time integratsiyalar bo‘yicha ko‘nikmalarga ega."
+      "prefix": "Full Stack",
+      "title": "Full Stack Dasturlash",
+      "titleHighlight": "Dasturlash",
+      "icon": "Full Stack Dasturlash",
+      "text": "React, Next.js, Node.js va Express yordamida moslashuvchan veb-ilovalar yaratish. REST API, autentifikatsiya va real-time integratsiyalar bo'yicha ko'nikmalarga ega."
     },
     "database": {
-      "title": "Ma’lumotlar <1>Bazalari</1>",
+      "prefix": "Ma'lumotlar",
+      "title": "Ma'lumotlar Bazalari",
+      "titleHighlight": "Bazalari",
+      "icon": "Ma'lumotlar Bazalari",
       "text": "PostgreSQL, MongoDB va SQL bo‘yicha bilimli. Ma’lumotlar sxemalarini loyihalash, so‘rovlarni optimallashtirish va ma’lumotlar yaxlitligini ta’minlashda tajribaga ega."
     }
   },
@@ -21,8 +31,7 @@
   "contacts": "// aloqa",
   "link": "Loyihani ko‘rish",
   "works": {
-    "title": "Mening Ishlarim",
-    "showProject": "Loyihani ko‘rish",
+    "title": "Mening Ishlarim",    "titleHighlight": "Ishlarim",    "showProject": "Loyihani ko‘rish",
     "project1": {
       "title": "Eco Life Etiqo'd",
       "description": "Eco-Life Etiqod — bu sog‘lomlashtirish kurorti veb-sayti bo‘lib, tabiiy buloq suvi, shved stoli va qulay oilaviy muhitni namoyish etadi. U zamonaviy dizayn va silliq animatsiyalarga ega ko‘p sahifali moslashuvchan maket bilan yaratilgan. HTML, CSS, JavaScript va React yordamida qurilgan bo‘lib, barcha qurilmalarda qulay tajriba taqdim etadi."
@@ -34,6 +43,76 @@
   },
   "footer": {
     "title": "Freelance loyihalar uchun mavjudman",
-    "description": "Qiziqarli loyiha bormi? Menga email yuboring yoki messenjerlar orqali bog‘laning!"
+    "description": "Qiziqarli loyiha bormi? Menga email yuboring yoki messenjerlar orqali bog‘laning!"  },
+  "contact": {
+    "title": "Menga Yozish",
+    "titleHighlight": "Yozish",
+    "subtitle": "Sizdan eshitishdan xursandman. Menga xabar yuboring va men tezda javob beraman.",
+    "email": "Email",
+    "phone": "Telefon",
+    "location": "Joylashuv",
+    "address": "Tashkent, O'zbekiston",
+    "emailAddress": "pakhlavon.khamidov@gmail.com",
+    "phoneNumber": "+998 (90) 123-45-67",
+    "form": {
+      "name": "Ismingiz",
+      "namePlaceholder": "Olim Mirzayev",
+      "email": "Emailingiz",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Mavzu",
+      "subjectPlaceholder": "Loyiha So'rovi",
+      "message": "Xabar",
+      "messagePlaceholder": "Loyihangiz yoki so'rovingiz haqida menga ayting...",
+      "send": "Xabar Yuboring",
+      "success": "✓ Xabar muvaffaqiyatli yuborildi! Tezda javob beraman.",
+      "error": "✗ Iltimos, barcha majburiy maydonlarni to'ldiring."
+    }
+  },
+  "about": {
+    "title": "Men haqimda",
+    "name": "Hamidov Pahlavon",
+    "hero": {
+      "title": "Men Haqimda",
+      "description": "Men interfeysd­an backend arxitekturasigacha to'liq raqamli tizimlarni loyihalayman va yarataman — ishlash, scalability va toza o'zaro aloqa bilan diqqat qaratib."
+    },
+    "expertise": {
+      "title": "Mening Tajribam",
+      "titleHighlight": "Tajriba",
+      "software": {
+        "title": "Dastur Muhandisligi",
+        "description": "Ishchi, maintainable kod yozish, ishlash, scalability va toza arxitekturaga e'tibor qaratib. Java, Python, JavaScript va C++ tillarida Object-Oriented va Functional programmaviy paradigmalarida ixtisoslashgan; ma'lumot strukturalari, algoritmlar va dizayn shablonlarida kuchli asosga ega."
+      },
+      "fullstack": {
+        "title": "Full Stack Dasturlash",
+        "description": "Moslashuvchan UI dan backend xizmatlarigacha va API larigacha to'liq veb-ilovalar yaratish. React va Next.js oldamda, Node.js va Express orqa tomonda ishlatib, holat boshqaruvidan joylashtiruvchiga qadar hammasini o'z ichiga olgan bejiz tajribalar yarataman."
+      },
+      "backend": {
+        "title": "Backend va API lar",
+        "description": "REST API loyihalashtirish, murakkab biznes mantiqini amalga oshirish va uchinchi tomon xizmatlarini integratsiya qilish. Mening backend tajribasi autentifikatsiya tizimlari, ma'lumotlar bazasi optimallashtirish, xato boshqarish va scalable xizmat arxitekturalarini qamrab turadi."
+      },
+      "systems": {
+        "title": "Sistema Dizayni",
+        "description": "Ma'lumotlar almashinuvi, arxitektura qarorlari va modul dizayn shablonlarida diqqat bilan to'liq tizimlarni strukturalash. Men kod aniqligini va mas'uliyat bo'linishni saqlab, samarali ravishda kengaytiradigan tizimlar yaratishga e'tibor qarataman."
+      },
+      "applications": {
+        "title": "Ilova Ishlab Chiqarish",
+        "description": "Haqiqiy dunyo foydalanish holatlariga ega funktsional ilovalar yaratish, UI komponentlari, biznes mantiqiy va foydalanuvchi o'zaro aloqa oqimlarini moslashuvchan echimlar bilan birlashtirish."
+      },
+      "database": {
+        "title": "Ma'lumotlar va Saqlash",
+        "description": "Relatsion va NoSQL ma'lumotlar bazalari bilan ishlash, samarali sxemalar loyihalashtirish, so'rovlarni optimallashtirish va ma'lumotlar kirish shablonlarini boshqarish. PostgreSQL, MongoDB va SQL da tajribali; ma'lumotlar yaxlitligi va ishlash sozladi tajribaga ega."
+      }
+    },
+    "process": {
+      "title": "Qanday Ishlaydiguni",
+      "step1": "01. O'ylash",
+      "step1_desc": "Muammoni tushunish, talablarni belgilash va biror kod yozmasdan oldin toza tizim strukturasini aniqlash.",
+      "step2": "02. Loyihalashtirish",
+      "step2_desc": "Arxitektura, UI/UX oqimi va ma'lumot modellarini planlash. Ishlab chiqarishni yo'navbarlovchi chizmalar yaratish.",
+      "step3": "03. Qurilish",
+      "step3_desc": "Eng yaxshi amaliyotlar va dokumentatsiyani saqlab, toza, scalable va samarali kod amalga oshirish.",
+      "step4": "04. Takomillashtrish",
+      "step4_desc": "Ishlashni optimallashtirish, to'liq sinab chiqish va fikr-mulohazalarga asoslangan foydalanuvchi tajribasini yaxshilash."
+    }
   }
 }

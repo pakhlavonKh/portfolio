@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Mail, Phone, MapPin, Send, Instagram } from "lucide-react";
 
 function Contact() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,126 +22,134 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
-      setStatus('error');
-      setTimeout(() => setStatus(''), 3000);
+      setStatus("error");
+      setTimeout(() => setStatus(""), 3000);
       return;
     }
 
     // Simulate form submission
-    setStatus('success');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setTimeout(() => setStatus(''), 3000);
+    setStatus("success");
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    setTimeout(() => setStatus(""), 3000);
   };
 
   return (
     <main>
       <section className="contact">
         <div className="contact__header">
-          <h1 className="contact__title">{t('contact.title')}</h1>
-          <p className="contact__subtitle">{t('contact.subtitle')}</p>
+          <h1 className="contact__title">
+            Get in <span>{t("contact.titleHighlight")}</span>
+          </h1>
+          <p className="contact__subtitle">{t("contact.subtitle")}</p>
         </div>
 
         <div className="contact__container">
-          {/* Contact Info */}
-          <div className="contact__info">
-            <div className="contact__item">
-              <Mail size={32} className="contact__icon" />
-              <div>
-                <h3>{t('contact.email')}</h3>
-                <a href="mailto:pakhlavon.khamidov@gmail.com">
-                  pakhlavon.khamidov@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div className="contact__item">
-              <Phone size={32} className="contact__icon" />
-              <div>
-                <h3>{t('contact.phone')}</h3>
-                <a href="tel:+998901234567">+998 (90) 123-45-67</a>
-              </div>
-            </div>
-
-            <div className="contact__item">
-              <MapPin size={32} className="contact__icon" />
-              <div>
-                <h3>{t('contact.location')}</h3>
-                <p>Tashkent, Uzbekistan</p>
-              </div>
-            </div>
-          </div>
-
           {/* Contact Form */}
           <form className="contact__form" onSubmit={handleSubmit}>
-            <div className="form__group">
-              <label htmlFor="name">{t('contact.form.name')}</label>
+            <div className="form__group floating">
               <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder={t('contact.form.namePlaceholder')}
+                placeholder=" "
                 required
               />
+              <label htmlFor="name">{t("contact.form.name")}</label>
             </div>
 
-            <div className="form__group">
-              <label htmlFor="email">{t('contact.form.email')}</label>
+            <div className="form__group floating">
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder={t('contact.form.emailPlaceholder')}
+                placeholder=" "
                 required
               />
+              <label htmlFor="email">{t("contact.form.email")}</label>
             </div>
 
-            <div className="form__group">
-              <label htmlFor="subject">{t('contact.form.subject')}</label>
+            <div className="form__group floating">
               <input
                 type="text"
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder={t('contact.form.subjectPlaceholder')}
+                placeholder=" "
               />
+              <label htmlFor="subject">{t("contact.form.subject")}</label>
             </div>
 
-            <div className="form__group">
-              <label htmlFor="message">{t('contact.form.message')}</label>
+            <div className="form__group floating">
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder={t('contact.form.messagePlaceholder')}
-                rows="6"
+                placeholder=" "
+                rows="5"
                 required
               />
+              <label htmlFor="message">{t("contact.form.message")}</label>
             </div>
 
             <button type="submit" className="form__button">
-              {t('contact.form.send')} <Send size={20} />
+              {t("contact.form.send")} <Send size={20} />
             </button>
 
-            {status === 'success' && (
+            {status === "success" && (
               <p className="form__message form__message--success">
-                {t('contact.form.success')}
+                {t("contact.form.success")}
               </p>
             )}
-            {status === 'error' && (
+            {status === "error" && (
               <p className="form__message form__message--error">
-                {t('contact.form.error')}
+                {t("contact.form.error")}
               </p>
             )}
           </form>
+
+          {/* Contact Info */}
+          <div className="contact__info">
+            <div className="contact__item">
+              <Mail size={32} className="contact__icon" />
+              <div>
+                <h3>{t("contact.email")}</h3>
+                <a href="mailto:76khwmidov@gmail.com">76khwmidov@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="contact__item">
+              <Phone size={32} className="contact__icon" />
+              <div>
+                <h3>{t("contact.phone")}</h3>
+                <a href="tel:+998949941763"> +998 (94) 994 17 63</a>
+              </div>
+            </div>
+
+            <div className="contact__item">
+              <Send size={32} className="contact__icon" />
+              <div>
+                <h3>Telegram</h3>
+                <a href="https://t.me/pahlavon_kh">pakhlavon_kh</a>
+              </div>
+            </div>
+
+            <div className="contact__item">
+              <Instagram size={32} className="contact__icon" />
+              <div>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/pakhlavon_kh/">pakhlavon_kh</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

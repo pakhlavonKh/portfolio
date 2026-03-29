@@ -1,16 +1,26 @@
 {
-  "title": "Benim <1>Uzmanlığım</1>",
+  "title": "Benim Uzmanlığım",
+  "titleHighlight": "Uzmanlığım",
   "cards": {
     "software": {
-      "title": "Yazılım <1>Geliştirme</1>",
+      "prefix": "Yazılım",
+      "title": "Yazılım Geliştirme",
+      "titleHighlight": "Geliştirme",
+      "icon": "Kod / Yazılım Geliştirme",
       "text": "Java, Python, JavaScript ve C++ ile OOP ve fonksiyonel programlama deneyimi. Algoritmalar ve problem çözmede güçlü bir temele sahip."
     },
     "fullstack": {
-      "title": "Full Stack <1>Geliştirme</1>",
+      "prefix": "Full Stack",
+      "title": "Full Stack Geliştirme",
+      "titleHighlight": "Geliştirme",
+      "icon": "Full Stack Geliştirme",
       "text": "React, Next.js, Node.js ve Express ile duyarlı web uygulamaları geliştirme. REST API, kimlik doğrulama ve gerçek zamanlı entegrasyonlarda yetkin."
     },
     "database": {
-      "title": "Veritabanı <1>Sistemleri</1>",
+      "prefix": "Veritabanı",
+      "title": "Veritabanı Sistemleri",
+      "titleHighlight": "Sistemleri",
+      "icon": "Veritabanı Sistemleri",
       "text": "PostgreSQL, MongoDB ve SQL konusunda yetkin. İlişkisel şemalar tasarlama, sorguları optimize etme ve veri bütünlüğünü sağlama deneyimine sahip."
     }
   },
@@ -22,6 +32,7 @@
   "link": "Projeyi Görüntüle",
   "works": {
     "title": "Benim Çalışmalarım",
+    "titleHighlight": "Çalışmalarım",
     "showProject": "Projeyi Görüntüle",
     "project1": {
       "title": "Eco Life Etiqo'd",
@@ -35,5 +46,74 @@
   "footer": {
     "title": "Freelance projeler için uygunum",
     "description": "Yardımcı olmamı istediğiniz heyecan verici bir projeniz mi var? Bana e-posta gönderin veya anlık mesajla iletişime geçin!"
+  },
+  "contact": {
+    "title": "Benimle İletişime Geçin",    "titleHighlight": "Geçin",    "subtitle": "Senden haber almaktan çok mutlu olurum. Bana bir mesaj gönder ve en kısa sürede cevap vereceğim.",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "location": "Konum",
+    "address": "Taşkent, Özbekistan",
+    "emailAddress": "pakhlavon.khamidov@gmail.com",
+    "phoneNumber": "+998 (90) 123-45-67",
+    "form": {
+      "name": "Adınız",
+      "namePlaceholder": "Ahmet Yıldız",
+      "email": "E-posta Adresiniz",
+      "emailPlaceholder": "you@example.com",
+      "subject": "Konu",
+      "subjectPlaceholder": "Proje Talebi",
+      "message": "Mesaj",
+      "messagePlaceholder": "Projeniz veya talebiniz hakkında bana söyleyin...",
+      "send": "Mesaj Gönder",
+      "success": "✓ Mesaj başarıyla gönderildi! Kısa sürede vereceğim.",
+      "error": "✗ Lütfen tüm gerekli alanları doldurun."
+    }
+  },
+  "about": {
+    "title": "Hakkımda",
+    "name": "Khamidov Pakhlavon",
+    "hero": {
+      "title": "Hakkımda",
+      "description": "Arayüzden backend mimarisine kadar tam dijital sistemleri tasarlarım ve geliştiririm — performans, ölçeklenebilirlik ve temiz etkileşime odaklanarak."
+    },
+    "expertise": {
+      "title": "Uzmanlık Alanlarım",
+      "titleHighlight": "Uzmanlık",
+      "software": {
+        "title": "Yazılım Mühendisliği",
+        "description": "Performans, ölçeklenebilirlik ve temiz mimariye odaklanarak yapılandırılmış, bakımı kolay kod yazılması. Java, Python, JavaScript ve C++ dillerinde Nesne Yönelimli ve Fonksiyonel programlama paradigmalarında uzmanlaşmış; veri yapıları, algoritmalar ve tasarım desenleri konusunda güçlü bir temele sahibim."
+      },
+      "fullstack": {
+        "title": "Full Stack Geliştirme",
+        "description": "Duyarlı UI'dan backend hizmetlerine ve API'lere kadar tam web uygulamaları oluşturma. React ve Next.js ön uç ile Node.js ve Express arka uç kullanarak hal tasarımından dağıtıma kadar her şeyi işleyen sorunsuz deneyimler create ediyorum."
+      },
+      "backend": {
+        "title": "Backend ve API'ler",
+        "description": "REST API tasarlama, karmaşık iş mantığı uygulama ve üçüncü taraf hizmetlerini entegre etme. Backend uzmanlığım kimlik doğrulama sistemleri, veritabanı optimizasyonu, hata işleme ve ölçeklenebilir hizmet mimarilerinin oluşturulmasını kapsamaktadır."
+      },
+      "systems": {
+        "title": "Sistem Tasarımı",
+        "description": "Veri akışı, mimari kararlar ve modüler tasarım desenleri konusunda dikkat ile tam sistemlerin yapılandırılması. Kod netliğini ve sorumluluk ayrımını koruyarak verimli bir şekilde ölçeklenen sistemler oluşturmaya odaklanıyorum."
+      },
+      "applications": {
+        "title": "Uygulama Geliştirme",
+        "description": "Gerçek dünya kullanım örneklerine sahip işlevsel uygulamalar oluşturma, UI bileşenleri, iş mantığı ve kullanıcı etkileşim akışlarını bir araya getiren bütünlü çözümlere entegre etme."
+      },
+      "database": {
+        "title": "Veri ve Depolama",
+        "description": "İlişkisel ve NoSQL veritabanlarıyla çalışma, verimli şema tasarlama, sorguları optimize etme ve veri erişim desenleri yönetme. PostgreSQL, MongoDB ve SQL konusunda deneyimli; veri bütünlüğü ve performans ayarlaması konusunda deneyime sahibim."
+      }
+    },
+    "process": {
+      "title": "Nasıl Çalışırım",
+      "step1": "01. Düşünme",
+      "step1_desc": "Problemi anlamak, gereksinimleri belirlemek ve kod yazmadan önce net sistem yapısını tanımlamak.",
+      "step2": "02. Tasarlama",
+      "step2_desc": "Mimariyi, UI/UX akışını ve veri modellerini planlama. Geliştirmeyi yönlendiren şemalar oluşturma.",
+      "step3": "03. İnşaa Etme",
+      "step3_desc": "En iyi uygulamaları ve belgelendirmeyi koruyarak temiz, ölçeklenebilir ve verimli kod uygulaması.",
+      "step4": "04. Rafine Etme",
+      "step4_desc": "Performansı optimize etme, kapsamlı test etme ve geri bildirime dayalı kullanıcı deneyimini iyileştirme."
+    }
   }
 }

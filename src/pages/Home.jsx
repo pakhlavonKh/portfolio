@@ -1,11 +1,12 @@
 import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import binary from "/public/assets/binary.webp";
+import BinaryRain from "../components/BinaryRain";
 import project1 from "/public/assets/project1.webp";
 import project2 from "/public/assets/project2.webp";
 import { Code, Globe, Server, ExternalLink } from "lucide-react";
-import { Trans } from "react-i18next";import AnimatedWireframeBg from "../components/FlowingLinesBg";
+import AnimatedWireframeBg from "../components/FlowingLinesBg";
+import LiquidBinaryField from "../components/LiquidBinaryField";
 
 function Home() {
   const expertiseRef = useRef(null);
@@ -40,8 +41,8 @@ function Home() {
   }, []);
   return (
     <main>
-      <AnimatedWireframeBg />
       <section className="hero" id="hero">
+        <AnimatedWireframeBg showParticles={true} />
         <div className="center">
           <h1 id="name">Khamidov Pakhlavon</h1>
           <h2 id="title">{t("hero__title")}</h2>
@@ -57,9 +58,7 @@ function Home() {
         id="expertise"
       >
         <h2 className="expertise__title">
-          <Trans i18nKey="title">
-            My <span>Expertise</span>
-          </Trans>
+          My <span>{t("titleHighlight")}</span>
         </h2>
 
         <div className="expertise__cards">
@@ -67,14 +66,12 @@ function Home() {
             <div className="expertise__headline">
               <Code
                 className="expertise__icon"
-                title="Code / Software Development"
+                title={t("cards.software.icon")}
                 strokeWidth={1.5}
                 size={32}
               />
               <h3>
-                <Trans i18nKey="cards.software.title">
-                  Software <span>Development</span>
-                </Trans>
+                {t("cards.software.prefix")} <span>{t("cards.software.titleHighlight")}</span>
               </h3>
             </div>
             <div className="expertise__text">
@@ -86,15 +83,13 @@ function Home() {
             <div className="expertise__headline">
               <Globe
                 className="expertise__icon"
-                title="Full Stack Development"
+                title={t("cards.fullstack.icon")}
                 strokeWidth={1.5}
                 size={32}
               />
 
               <h3>
-                <Trans i18nKey="cards.fullstack.title">
-                  Full Stack <span>Development</span>
-                </Trans>
+                {t("cards.fullstack.prefix")} <span>{t("cards.fullstack.titleHighlight")}</span>
               </h3>
             </div>
             <div className="expertise__text">
@@ -106,14 +101,12 @@ function Home() {
             <div className="expertise__headline">
               <Server
                 className="expertise__icon"
-                title="Database Systems"
+                title={t("cards.database.icon")}
                 strokeWidth={1.5}
                 size={32}
               />
               <h3>
-                <Trans i18nKey="cards.database.title">
-                  Database <span>Systems</span>
-                </Trans>
+                {t("cards.database.prefix")} <span>{t("cards.database.titleHighlight")}</span>
               </h3>
             </div>
             <div className="expertise__text">
@@ -122,8 +115,16 @@ function Home() {
           </div>
         </div>
 
-        <div className="expertise__image-container">
-          <img src={binary} alt="binary code" className="expertise__image" />
+        <div 
+          className="expertise__image-container"
+          style={{
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div style={{ position: "relative", height: "500px", marginTop: "-100px" }}>
+            <BinaryRain />
+          </div>
         </div>
       </section>
       <section
@@ -132,7 +133,7 @@ function Home() {
         id="work"
       >
       <h2 className="work__title">
-        {t("works.title")}
+        My <span>{t("works.titleHighlight")}</span>
       </h2>
 
       <div className="work__cards">

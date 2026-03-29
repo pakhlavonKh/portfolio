@@ -38,7 +38,7 @@ function Header() {
   }, [location]);
   
   return (
-    <header className="header">
+    <header className={`header ${isFixed ? 'fixed' : ""}`}>
       <Link to="/" className="name-wrapper">
         <span className="first">K</span>
         <span className="rest hamidov">hamidov</span>

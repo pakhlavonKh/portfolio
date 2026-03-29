@@ -31,7 +31,7 @@ function Portfolio() {
         className={`work ${isVisible ? 'in-view' : ''}`}
         id="work"
       >
-        <h2 className="work__title">{t('works.title')}</h2>
+        <h2 className="work__title">My <span>{t('works.titleHighlight')}</span></h2>
 
         <div className="work__cards">
           <div className="work__card work__card--1">
