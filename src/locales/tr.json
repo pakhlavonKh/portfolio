@@ -1,5 +1,5 @@
 {
-  "title": "Benim Uzmanlığım",
+  "title": "Benim",
   "titleHighlight": "Uzmanlığım",
   "cards": {
     "software": {
@@ -31,7 +31,7 @@
   "contacts": "// iletişim",
   "link": "Projeyi Görüntüle",
   "works": {
-    "title": "Benim Çalışmalarım",
+    "title": "Benim",
     "titleHighlight": "Çalışmalarım",
     "showProject": "Projeyi Görüntüle",
     "project1": {
@@ -41,6 +41,34 @@
     "project2": {
       "title": "Mazzo Premium",
       "description": "Mazzo Premium, zarif görseller ve sezgisel gezinme ile premium ürünleri tanıtan şık bir e-ticaret vitrinidir. HTML, CSS, JavaScript ve React ile oluşturulmuştur ve sorunsuz, duyarlı bir kullanıcı deneyimi sunar."
+    },
+    "project3": {
+      "title": "Medicare UZ",
+      "description": "Medicare, tıbbi hizmetler, danışmanlıklar ve sağlık bilgilerine sağlayan kapsamlı bir sağlık platformudur. Duyarlı web uygulaması, hastaların tıbbi kaynaklara erişmesi ve Özbekistan'daki tıbbi profesyonellerle bağlantı kurması için sezgisel bir arayüz sunmaktadır."
+    },
+    "project4": {
+      "title": "Manaku Furniture",
+      "description": "Manaku, zarif tasarım ile premium ev mobilyaları gösteren lüks mobilya platformudur. Sofistike ürün kataloğu, ayrıntılı filtreleme ve müşteri deneyimine odaklanan sorunsuz ödeme süreci özelliklerdir."
+    },
+    "project5": {
+      "title": "PitStop Auto",
+      "description": "PitStop, otomobil sahiplerini profesyonel bakım hizmetleriyle birbirine bağlayan bir otomotiv hizmet platformudur. Dinamik web sitesi, hizmet sunumlarını, fiyatlandırmayı ve kullanıcı deneyimine odaklanan rezervasyon seçeneklerini göstermektedir."
+    },
+    "project6": {
+      "title": "Modulbino",
+      "description": "Modulbino, modüler tasarım çözümü için modern bir açılış sayfasıdır. Temiz profesyonel düzen, etkileyici görseller ve net değer önerileri ile dikkat çekmektedir. Tüm cihazlarda kullanıcıları hedeflemek için duyarlı tasarım ilkeleriyle oluşturulmuştur."
+    },
+    "project7": {
+      "title": "Invito",
+      "description": "Invito, zarif davet ve etkinlik yönetimi platformudur. Özelleştirilebilir dijital davetiyeler, konuk yönetimi ve RSVP takibi sunmakta, sorunsuz etkinlik koordinasyonuna odaklanmaktadır. Modern web teknolojileriyle oluşturulmuş, unutulmaz etkinlik deneyimleri için tasarlanmıştır."
+    },
+    "project8": {
+      "title": "Local Sustainable Green Marketplace",
+      "description": "Ekolojik olarak bilinçli üretici ve tüketicileri birbirine bağlayan topluluk odaklı sürdürülebilir pazaryerinin geliştirilmesini liderlik ettim. MongoDB tabanlı ürün kataloğu, kullanıcı kimlik doğrulaması ve işlem yönetimi uyguladım. Ürün filtreleme, satıcı profilleri ve sürdürülebilirlik metrikleri içerir. PHP arka ucu ve modern ön uç teknolojileriyle oluşturulmuş, çevresel sorumluluk ve yerel ticarete vurgu yapmaktadır."
+    },
+    "project9": {
+      "title": "Adaptive English Learning Platform",
+      "description": "İngilizce dil eğitimini kişiselleştirmek için tasarlanan yenilikçi uyarlamalı öğrenme platformunun teknik yöneticisi. Kullanıcı performansına göre zorluk seviyesini ve öğrenme yollarını ayarlayan yapay zeka tarafından yönlendirilen içerik uyarlamasını uyguladım. Etkileşimli dersler, ilerleme takibi ve oyunlaştırılmış öğrenme öğeleri içerir. React ön ucu ve Node.js arka ucu ile oluşturulmuş, çeşitli öğrenme stilleri ve yeterlilik seviyelerine hizmet vermektedir."
     }
   },
   "footer": {
@@ -48,7 +76,7 @@
     "description": "Yardımcı olmamı istediğiniz heyecan verici bir projeniz mi var? Bana e-posta gönderin veya anlık mesajla iletişime geçin!"
   },
   "contact": {
-    "title": "Benimle İletişime Geçin",    "titleHighlight": "Geçin",    "subtitle": "Senden haber almaktan çok mutlu olurum. Bana bir mesaj gönder ve en kısa sürede cevap vereceğim.",
+    "title": "Benimle İletişime",    "titleHighlight": "Geçin",    "subtitle": "Senden haber almaktan çok mutlu olurum. Bana bir mesaj gönder ve en kısa sürede cevap vereceğim.",
     "email": "E-posta",
     "phone": "Telefon",
     "location": "Konum",

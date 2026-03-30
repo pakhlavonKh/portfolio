@@ -8,37 +8,38 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
+    if (!isHomePage) {
+      // On non-home pages, always sticky
+      return;
+    }
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      console.log("Scroll event fired, scrollY:", scrollY);
       const hero = document.querySelector(".hero");
       if (!hero) {
-        console.warn("Hero section not found. Using scroll position fallback.");
         setIsFixed(scrollY > 100);
         return;
       }
       const rect = hero.getBoundingClientRect();
-      console.log("Hero - top:", rect.top, "bottom:", rect.bottom, "height:", rect.height);
       setIsFixed(rect.bottom <= 0);
     };
 
-    console.log("Adding scroll event listener");
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); 
     return () => {
-      console.log("Removing scroll event listener");
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isHomePage]);
 
   useEffect(() => {
     setIsOpen(false); 
   }, [location]);
   
   return (
-    <header className={`header ${isFixed ? 'fixed' : ""}`}>
+    <header className={`header ${isHomePage ? (isFixed ? 'fixed' : '') : 'sticky'}`}>
       <Link to="/" className="name-wrapper">
         <span className="first">K</span>
         <span className="rest hamidov">hamidov</span>
@@ -65,7 +66,7 @@ function Header() {
         <LanguageSwitcher  className="navigationLang"/>
       </div>
 
-      <ul className={`headerNav ${isFixed ? 'fixed' : ""}`}>
+      <ul className={`headerNav ${isHomePage && isFixed ? 'fixed' : ""}`}>
         <li><Link to="/" onClick={() => setIsOpen(false)}>{t("home")}</Link></li>
         <li><Link to="/about" onClick={() => setIsOpen(false)}>{t("expertise")}</Link></li>
         <li><Link to="/portfolio" onClick={() => setIsOpen(false)}>{t("work")}</Link></li>

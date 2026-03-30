@@ -41,7 +41,7 @@ function Contact() {
       <section className="contact">
         <div className="contact__header">
           <h1 className="contact__title">
-            Get in <span>{t("contact.titleHighlight")}</span>
+            {t("contact.title")} <span>{t("contact.titleHighlight")}</span>
           </h1>
           <p className="contact__subtitle">{t("contact.subtitle")}</p>
         </div>

@@ -205,13 +205,14 @@ const AnimatedWireframeBg = ({ showParticles = false }) => {
 
     // ---------- ANIMATION ----------
     let last = performance.now();
+    let animationId;
 
     const animate = () => {
       const now = performance.now();
       const delta = (now - last) / 1000;
       last = now;
 
-      requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
 
       material.uniforms.uTime.value += delta * (isMobile ? 0.6 : 1.2);
 
@@ -223,7 +224,7 @@ const AnimatedWireframeBg = ({ showParticles = false }) => {
       camera.position.y += (smooth.y * 10 - camera.position.y) * 0.04;
 
       // animate particles (cheap drift)
-      particles.rotation.y += delta * 0.02;
+      if (particles) particles.rotation.y += delta * 0.02;
 
       // animate shapes
       shapes.forEach((s, i) => {
@@ -236,7 +237,7 @@ const AnimatedWireframeBg = ({ showParticles = false }) => {
       renderer.render(scene, camera);
     };
 
-    animate();
+    animationId = animate();
 
     // ---------- RESIZE ----------
     window.addEventListener("resize", () => {
@@ -246,6 +247,7 @@ const AnimatedWireframeBg = ({ showParticles = false }) => {
     });
 
     return () => {
+      cancelAnimationFrame(animationId);
       renderer.dispose();
     };
   }, [showParticles]);

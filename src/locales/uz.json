@@ -1,5 +1,5 @@
 {
-  "title": "Mening Mutaxassisligim",
+  "title": "Mening",
   "titleHighlight": "Mutaxassisligim",
   "cards": {
     "software": {
@@ -31,21 +31,48 @@
   "contacts": "// aloqa",
   "link": "Loyihani ko‘rish",
   "works": {
-    "title": "Mening Ishlarim",    "titleHighlight": "Ishlarim",    "showProject": "Loyihani ko‘rish",
+    "title": "Mening",    "titleHighlight": "Ishlarim",    "showProject": "Loyihani ko‘rish",
     "project1": {
       "title": "Eco Life Etiqo'd",
       "description": "Eco-Life Etiqod — bu sog‘lomlashtirish kurorti veb-sayti bo‘lib, tabiiy buloq suvi, shved stoli va qulay oilaviy muhitni namoyish etadi. U zamonaviy dizayn va silliq animatsiyalarga ega ko‘p sahifali moslashuvchan maket bilan yaratilgan. HTML, CSS, JavaScript va React yordamida qurilgan bo‘lib, barcha qurilmalarda qulay tajriba taqdim etadi."
     },
     "project2": {
       "title": "Mazzo Premium",
-      "description": "Mazzo Premium — bu nafis vizuallar va qulay navigatsiya bilan premium mahsulotlarni taqdim etuvchi zamonaviy e-commerce sayti. HTML, CSS, JavaScript va React yordamida yaratilgan bo‘lib, foydalanuvchilarga qulay va moslashuvchan tajriba beradi."
+      "description": "Mazzo Premium — bu nafis vizuallar va qulay navigatsiya bilan premium mahsulotlarni taqdim etuvchi zamonaviy e-commerce sayti. HTML, CSS, JavaScript va React yordamida yaratilgan bo‘lib, foydalanuvchilarga qulay va moslashuvchan tajriba beradi."    },
+    "project3": {
+      "title": "Medicare UZ",
+      "description": "Medicare — bu tibbiy xizmatlar, maslahatlar va sog'lik ma'lumotlarini protsedura qiluvchi komplaeks sog'lik platformasi. Moslashuvchan veb-aplikatsiya bemorlarni tibbiy resursalarga kirish va O'zbekistondagi tibbiy mutaxassislari bilan bog'lanish imkoniyati beradi."
+    },
+    "project4": {
+      "title": "Manaku Furniture",
+      "description": "Manaku — bu zamonaviy dizayn bilan premium uy mebellarini taqdim etuvchi luksom mebelya platformasi. Muraqqab mahsulot katalogi, batafsil filtrlash va foydalanuvchi tajribasiga qaratilgan muammosiz rasm jarayoni mavjuddir."
+    },
+    "project5": {
+      "title": "PitStop Auto",
+      "description": "PitStop — bu mashina egalari va professional xizmatlarga muhtoj bo'lgan avtomobil servis platformasi. Dinamik veb-sayt xizmatlarni, narxlarni va foydalanuvchi tajribasiga qaratilgan buyurtma berishni namoyish etadi."
+    },
+    "project6": {
+      "title": "Modulbino",
+      "description": "Modulbino — bu modul dizayn yechimlar uchun zamonaviy boshlang'ich sahifa. Toza professional asos, ta'sirchan vizuallar va aniq qadr takliflari bilan ajralib turadi. Barcha qurilmalardagi foydalanuvchilarni maqsad qilib talab qiluvchi moslashuvchan dizayn prinsiplari yordamida yaratilgan."
+    },
+    "project7": {
+      "title": "Invito",
+      "description": "Invito — bu nafis taklif va tadbirlar boshqarish platformasi. Moslashtiriluvchi raqamli taklif, mehmonga boshqarish va RSVP kuzatuvi bilan taqdim etiladi, muammosiz tadbirlarni koordinatsiya qilishga qaratilgan. Zamonaviy veb-texnologiyalar yordamida yaratilgan, esda qoladigan tadbirlarni yaratish uchun loyihatlangan."
+    },
+    "project8": {
+      "title": "Local Sustainable Green Marketplace",
+      "description": "Ekologiya jihatidan ongli ishlab chiqaruvchilar va istamolichilarni birlashtiruvchi buyurtmaviy barqaror bozorning ishlab chiqarish rahbarligini amalga oshirdim. MongoDB asosidagi mahsulot katalogi, foydalanuvchilarni tasdiqlash va operatsiyalarni boshqarish ixcham qildim. Mahsulotlarni filtrlash, sotuvchi profillarini va barqarorlik metrikalarini o'z ichiga oladi. PHP orqasidagi va zamonaviy oldiga qarg'alariga yaratilgan, atrof muhit javobiylikni va mahalliy tijoratga e'tibor qaratgan."
+    },
+    "project9": {
+      "title": "Adaptive English Learning Platform",
+      "description": "Ingliz tilini o'rganishni shaxsiy qilib yaratilgan yangi moslashuvchan o'qish platformasining texnik rahbari. Foydalanuvchi ishlashiga asoslangan yangilangan va o'qish yo'llarini moslashtiruvchi suniy intellekt asosidagi kontent moslashuvini amalga oshirdim. Interaktiv derslarni, taraqqiyot kuzatuvni va o'yin elementlarini o'qishni o'z ichiga oladi. React oldga va Node.js orqasiga yaratilgan, turli o'qish uslublari va savodxonlik darajasiga xizmat ko'rsatildi."
     }
   },
   "footer": {
     "title": "Freelance loyihalar uchun mavjudman",
     "description": "Qiziqarli loyiha bormi? Menga email yuboring yoki messenjerlar orqali bog‘laning!"  },
   "contact": {
-    "title": "Menga Yozish",
+    "title": "Menga",
     "titleHighlight": "Yozish",
     "subtitle": "Sizdan eshitishdan xursandman. Menga xabar yuboring va men tezda javob beraman.",
     "email": "Email",
