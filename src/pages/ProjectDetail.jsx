@@ -8,12 +8,21 @@ function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768);
 
   const project = projects.find(p => p.id === parseInt(id));
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (!project) {
     return (
@@ -38,14 +47,14 @@ function ProjectDetail() {
   }
 
   return (
-    <main style={{ padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
+    <main style={{ padding: isMobile ? '2rem 1.5rem' : '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
       <button 
         onClick={() => navigate('/portfolio')}
         style={{
           background: 'transparent',
           border: 'none',
           color: 'var(--accent)',
-          fontSize: '1.5rem',
+          fontSize: isMobile ? '1.2rem' : '1.5rem',
           cursor: 'pointer',
           marginBottom: '2rem',
           padding: 0
@@ -54,7 +63,7 @@ function ProjectDetail() {
         ← Back to Portfolio
       </button>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '2rem' : '4rem', alignItems: 'start' }}>
         <div>
           <img 
             src={project.image} 
@@ -69,15 +78,18 @@ function ProjectDetail() {
               style={{
                 display: 'inline-block',
                 marginTop: '2rem',
-                padding: '1rem 2rem',
+                padding: isMobile ? '0.8rem 1.5rem' : '1rem 2rem',
                 background: 'var(--accent)',
                 color: '#0f172a',
                 textDecoration: 'none',
                 borderRadius: '0.5rem',
                 fontWeight: '600',
-                fontSize: '1.2rem',
+                fontSize: isMobile ? '1rem' : '1.2rem',
                 cursor: 'pointer',
-                marginRight: '1rem'
+                marginRight: isMobile ? '0' : '1rem',
+                marginBottom: isMobile ? '1rem' : '0',
+                width: isMobile ? '100%' : 'auto',
+                textAlign: 'center'
               }}
             >
               View Live Demo <ArrowUpRight style={{ display: 'inline', marginLeft: '0.5rem' }} size={20} />
@@ -90,16 +102,18 @@ function ProjectDetail() {
               rel="noopener noreferrer"
               style={{
                 display: 'inline-block',
-                marginTop: '2rem',
-                padding: '1rem 2rem',
+                marginTop: isMobile ? '0' : '2rem',
+                padding: isMobile ? '0.8rem 1.5rem' : '1rem 2rem',
                 background: 'transparent',
                 border: '2px solid var(--accent)',
                 color: 'var(--accent)',
                 textDecoration: 'none',
                 borderRadius: '0.5rem',
                 fontWeight: '600',
-                fontSize: '1.2rem',
-                cursor: 'pointer'
+                fontSize: isMobile ? '1rem' : '1.2rem',
+                cursor: 'pointer',
+                width: isMobile ? '100%' : 'auto',
+                textAlign: 'center'
               }}
             >
               <Github style={{ display: 'inline', marginRight: '0.5rem' }} size={20} /> View on GitHub
@@ -108,27 +122,27 @@ function ProjectDetail() {
         </div>
 
         <div>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: 'var(--accent)' }}>
+          <h1 style={{ fontSize: isMobile ? '2rem' : '3rem', marginBottom: '1rem', color: 'var(--accent)' }}>
             {t(project.titleKey)}
           </h1>
           
-          <p style={{ fontSize: '1.6rem', lineHeight: '1.8', marginBottom: '2rem', color: '#ccc' }}>
+          <p style={{ fontSize: isMobile ? '1.2rem' : '1.6rem', lineHeight: '1.8', marginBottom: '2rem', color: '#ccc' }}>
             {t(project.descriptionKey)}
           </p>
 
           <div style={{ marginTop: '2rem' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--accent)' }}>Technologies</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+            <h3 style={{ fontSize: isMobile ? '1.2rem' : '1.5rem', marginBottom: '1rem', color: 'var(--accent)' }}>Technologies</h3>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: isMobile ? '0.8rem' : '1rem', justifyContent: isMobile ? 'center' : 'flex-start' }}>
               {project.technologies.map((tech, idx) => (
                 <span
                   key={idx}
                   style={{
-                    padding: '0.5rem 1rem',
+                    padding: isMobile ? '0.4rem 0.8rem' : '0.5rem 1rem',
                     background: 'rgba(100, 255, 218, 0.1)',
                     border: '1px solid var(--accent)',
                     borderRadius: '0.5rem',
                     color: 'var(--accent)',
-                    fontSize: '1.2rem'
+                    fontSize: isMobile ? '1rem' : '1.2rem'
                   }}
                 >
                   {tech}
@@ -138,11 +152,8 @@ function ProjectDetail() {
           </div>
 
           <div style={{ marginTop: '3rem' }}>
-            <p style={{ fontSize: '1.3rem', color: '#999' }}>
+            <p style={{ fontSize: isMobile ? '1rem' : '1.3rem', color: '#999' }}>
               <strong>Category:</strong> {project.category}
-            </p>
-            <p style={{ fontSize: '1.3rem', color: '#999', marginTop: '1rem' }}>
-              <strong>Status:</strong> {project.live ? '🟢 Live' : '🔵 In Development'}
             </p>
           </div>
         </div>

@@ -182,7 +182,7 @@ function Home() {
               )}
             </div>
             <div className="work__card-text">
-              <p className="work__card-description">{t(project.descriptionKey)}</p>
+              <p className="work__card-description">{t(project.shortDescriptionKey)}</p>
             </div>
           </a>
         ))}

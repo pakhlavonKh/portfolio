@@ -36,38 +36,47 @@
     "showProject": "Show project",
     "project1": {
       "title": "Eco Life Etiqo'd",
+      "shortDescription": "Wellness resort website with natural spring water and dining services",
       "description": "Eco-Life Etiqod is a wellness resort website showcasing natural spring water, buffet dining, and a cozy family-friendly atmosphere. It features a responsive multi-page layout with modern design and smooth interactions. Built with HTML, CSS, JavaScript, and React, the project delivers an engaging user experience across all devices."
     },
     "project2": {
       "title": "Mazzo Premium",
+      "shortDescription": "Premium e-commerce showcase with elegant product presentation",
       "description": "Mazzo Premium is an elegant e-commerce showcase featuring premium products, styled with refined visuals and intuitive navigation. Built using HTML, CSS, JavaScript, and React, the site delivers a seamless, responsive user experience."
     },
     "project3": {
       "title": "Medicare UZ",
+      "shortDescription": "Healthcare platform for medical services and consultations",
       "description": "Medicare is a comprehensive healthcare platform providing medical services, consultations, and wellness information. The responsive web application offers an intuitive interface for patients to access healthcare resources and connect with medical professionals in Uzbekistan."
     },
     "project4": {
       "title": "Manaku Furniture",
+      "shortDescription": "Luxury furniture e-commerce with premium home furnishings",
       "description": "Manaku is a luxury furniture e-commerce platform showcasing premium home furnishings with elegant design. Features a sophisticated product catalog, detailed filtering, and seamless checkout experience built with modern web technologies for discerning customers."
     },
     "project5": {
       "title": "PitStop Auto",
+      "shortDescription": "Automotive service platform for professional car maintenance",
       "description": "PitStop is an automotive service platform connecting car owners with professional maintenance services. The dynamic website showcases service offerings, pricing, and booking capabilities with a focus on user experience and reliable service delivery."
     },
     "project6": {
       "title": "Modulbino",
+      "shortDescription": "Modern landing page for modular design solutions",
       "description": "Modulbino is a modern landing page for a modular design solution. Features a clean, professional layout with compelling visuals and clear value propositions. Built with responsive design principles to attract and engage potential clients across all devices."
     },
     "project7": {
       "title": "Invito",
+      "shortDescription": "Event invitation and management platform",
       "description": "Invito is an elegant event invitation and management platform. Features customizable digital invitations, guest management, and RSVP tracking with a focus on seamless event coordination. Built with modern web technologies for memorable event experiences."
     },
     "project8": {
       "title": "Local Sustainable Green Marketplace",
+      "shortDescription": "Community-driven sustainable marketplace for eco-conscious commerce",
       "description": "Led development of a community-driven sustainable marketplace connecting eco-conscious producers and consumers. Implemented MongoDB-based product catalog, user authentication, and transaction management. Features include product filtering, vendor profiles, and sustainability metrics. Built with PHP backend and modern frontend technologies, emphasizing environmental responsibility and local commerce."
     },
     "project9": {
       "title": "Adaptive English Learning Platform",
+      "shortDescription": "AI-driven adaptive platform for personalized English learning",
       "description": "Technical manager for an innovative adaptive learning platform designed to personalize English language education. Implemented AI-driven content adaptation that adjusts difficulty and learning paths based on user performance. Features interactive lessons, progress tracking, and gamified learning elements. Built with React frontend and Node.js backend, serving multiple learning styles and proficiency levels."
     }
   },

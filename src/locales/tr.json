@@ -36,38 +36,47 @@
     "showProject": "Projeyi Görüntüle",
     "project1": {
       "title": "Eco Life Etiqo'd",
+      "shortDescription": "Doğal kaynak suyu ve yemek hizmetleri ile sağlık merkezi web sitesi",
       "description": "Eco-Life Etiqod, şifalı kaynak suyu, açık büfe yemekler ve sıcak aile ortamını tanıtan bir sağlık tesisi web sitesidir. Modern tasarım ve akıcı animasyonlarla çok sayfalı duyarlı bir düzen sunar. HTML, CSS, JavaScript ve React ile geliştirilmiş olup, tüm cihazlarda keyifli bir kullanıcı deneyimi sağlar."
     },
     "project2": {
       "title": "Mazzo Premium",
+      "shortDescription": "Premium ürünlerin zarif sunumu ile premium e-ticaret",
       "description": "Mazzo Premium, zarif görseller ve sezgisel gezinme ile premium ürünleri tanıtan şık bir e-ticaret vitrinidir. HTML, CSS, JavaScript ve React ile oluşturulmuştur ve sorunsuz, duyarlı bir kullanıcı deneyimi sunar."
     },
     "project3": {
       "title": "Medicare UZ",
+      "shortDescription": "Tıbbi hizmetler ve danışmanlık hizmetleri platformu",
       "description": "Medicare, tıbbi hizmetler, danışmanlıklar ve sağlık bilgilerine sağlayan kapsamlı bir sağlık platformudur. Duyarlı web uygulaması, hastaların tıbbi kaynaklara erişmesi ve Özbekistan'daki tıbbi profesyonellerle bağlantı kurması için sezgisel bir arayüz sunmaktadır."
     },
     "project4": {
       "title": "Manaku Furniture",
+      "shortDescription": "Premium ev mobilyaları ile lüks mobilya e-ticaret",
       "description": "Manaku, zarif tasarım ile premium ev mobilyaları gösteren lüks mobilya platformudur. Sofistike ürün kataloğu, ayrıntılı filtreleme ve müşteri deneyimine odaklanan sorunsuz ödeme süreci özelliklerdir."
     },
     "project5": {
       "title": "PitStop Auto",
+      "shortDescription": "Profesyonel otomobil bakım hizmetleri platformu",
       "description": "PitStop, otomobil sahiplerini profesyonel bakım hizmetleriyle birbirine bağlayan bir otomotiv hizmet platformudur. Dinamik web sitesi, hizmet sunumlarını, fiyatlandırmayı ve kullanıcı deneyimine odaklanan rezervasyon seçeneklerini göstermektedir."
     },
     "project6": {
       "title": "Modulbino",
+      "shortDescription": "Modüler tasarım çözümleri için modern açılış sayfası",
       "description": "Modulbino, modüler tasarım çözümü için modern bir açılış sayfasıdır. Temiz profesyonel düzen, etkileyici görseller ve net değer önerileri ile dikkat çekmektedir. Tüm cihazlarda kullanıcıları hedeflemek için duyarlı tasarım ilkeleriyle oluşturulmuştur."
     },
     "project7": {
       "title": "Invito",
+      "shortDescription": "Davet ve etkinlik yönetim platformu",
       "description": "Invito, zarif davet ve etkinlik yönetimi platformudur. Özelleştirilebilir dijital davetiyeler, konuk yönetimi ve RSVP takibi sunmakta, sorunsuz etkinlik koordinasyonuna odaklanmaktadır. Modern web teknolojileriyle oluşturulmuş, unutulmaz etkinlik deneyimleri için tasarlanmıştır."
     },
     "project8": {
       "title": "Local Sustainable Green Marketplace",
+      "shortDescription": "Çevre bilincine sahip ticaret için topluluk odaklı pazaryeri",
       "description": "Ekolojik olarak bilinçli üretici ve tüketicileri birbirine bağlayan topluluk odaklı sürdürülebilir pazaryerinin geliştirilmesini liderlik ettim. MongoDB tabanlı ürün kataloğu, kullanıcı kimlik doğrulaması ve işlem yönetimi uyguladım. Ürün filtreleme, satıcı profilleri ve sürdürülebilirlik metrikleri içerir. PHP arka ucu ve modern ön uç teknolojileriyle oluşturulmuş, çevresel sorumluluk ve yerel ticarete vurgu yapmaktadır."
     },
     "project9": {
       "title": "Adaptive English Learning Platform",
+      "shortDescription": "Kişiselleştirilmiş İngilizce öğrenimi için yapay zeka destekli platform",
       "description": "İngilizce dil eğitimini kişiselleştirmek için tasarlanan yenilikçi uyarlamalı öğrenme platformunun teknik yöneticisi. Kullanıcı performansına göre zorluk seviyesini ve öğrenme yollarını ayarlayan yapay zeka tarafından yönlendirilen içerik uyarlamasını uyguladım. Etkileşimli dersler, ilerleme takibi ve oyunlaştırılmış öğrenme öğeleri içerir. React ön ucu ve Node.js arka ucu ile oluşturulmuş, çeşitli öğrenme stilleri ve yeterlilik seviyelerine hizmet vermektedir."
     }
   },
