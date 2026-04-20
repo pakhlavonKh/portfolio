@@ -1083,6 +1083,14 @@ canvas {
   animation-delay: 0.6s;
 }
 
+/* Ensure all project cards become visible when the work section is in-view.
+   Previously only card--1 through card--6 had animation rules, leaving
+   additional cards (7+) with opacity: 0. Apply the fadeUp animation to all
+   cards so every project renders. */
+.work.in-view .work__card {
+  animation: fadeUp 0.6s ease forwards;
+}
+
 .work__card-image {
   width: 100%;
   height: auto;

@@ -20,19 +20,33 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       setStatus("error");
       setTimeout(() => setStatus(""), 3000);
       return;
     }
 
-    // Simulate form submission
-    setStatus("success");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzatTdWnVw2DpPCj1K2TaBv113-JRsfvgoC0Ls32oZDLUoYtQvvB3iBdHicOl9SdrVH/exec", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.status === "success") {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+
     setTimeout(() => setStatus(""), 3000);
   };
 
@@ -122,7 +136,7 @@ function Contact() {
               <Mail size={32} className="contact__icon" />
               <div>
                 <h3>{t("contact.email")}</h3>
-                <a href="mailto:76khwmidov@gmail.com">76khwmidov@gmail.com</a>
+                <a href="mailto:info@pakhlavon.dev">info@pakhlavon.dev</a>
               </div>
             </div>
 
@@ -146,7 +160,9 @@ function Contact() {
               <Instagram size={32} className="contact__icon" />
               <div>
                 <h3>Instagram</h3>
-                <a href="https://www.instagram.com/pakhlavon_kh/">pakhlavon_kh</a>
+                <a href="https://www.instagram.com/pakhlavon_kh/">
+                  pakhlavon_kh
+                </a>
               </div>
             </div>
           </div>

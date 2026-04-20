@@ -80,8 +80,8 @@ function Footer() {
       </div>
 
       <div className="footer__links">
-        <a href="mailto:76khwmidov@gmail.com" target="_blank" rel="noreferrer">
-          76khwmidov@gmail.com
+        <a href="mailto:info@pakhlavon.dev" target="_blank" rel="noreferrer">
+          info@pakhlavon.dev
         </a>
 
         <div className="footer__links-icons">

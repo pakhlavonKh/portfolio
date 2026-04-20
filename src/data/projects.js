@@ -1,12 +1,12 @@
-import ecolife from '/public/assets/ecolife.webp';
-import mazzo from '/public/assets/mazzo.webp';
-import medicare from '/public/assets/medicare.png';
-import manaku from '/public/assets/manaku.png';
-import pitstop from '/public/assets/pitstop.png';
-import modulbino from '/public/assets/modulbino.png';
-import invito from '/public/assets/invito.png';
-import leaf from '/public/assets/leaf.png';
-import english from '/public/assets/english.png';
+import ecolife from '/assets/ecolife.webp';
+import mazzo from '/assets/mazzo.webp';
+import medicare from '/assets/medicare.png';
+import manaku from '/assets/manaku.png';
+import pitstop from '/assets/pitstop.png';
+import modulbino from '/assets/modulbino.png';
+import invito from '/assets/invito.png';
+import leaf from '/assets/leaf.png';
+import english from '/assets/english.png';
 
 export const projects = [
   {
@@ -94,7 +94,7 @@ export const projects = [
     shortDescriptionKey: 'works.project7.shortDescription',
     image: invito,
     imageAlt: 'project7',
-    link: 'https://invito.netlify.app/',
+    link: 'https://invito.live',
     githubLink: 'https://github.com/pakhlavonKh/priglashenie_uz',
     live: true,
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
