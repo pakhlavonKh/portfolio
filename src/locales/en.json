@@ -108,6 +108,37 @@
       "error": "✗ Please fill in all required fields."
     }
   },
+  "seo": {
+    "home": {
+      "title": "{{siteName}} | Software Engineer & Web Developer",
+      "description": "Portfolio of Khamidov Pakhlavon — software engineer and web developer crafting modern full-stack experiences."
+    },
+    "about": {
+      "title": "About {{siteName}} | Software Engineer & Web Developer",
+      "description": "Learn about Khamidov Pakhlavon’s background, engineering approach, and areas of expertise."
+    },
+    "portfolio": {
+      "title": "Projects by {{siteName}}",
+      "description": "Browse featured web development projects spanning React, Node.js, databases, and modern UI design."
+    },
+    "contact": {
+      "title": "Contact {{siteName}}",
+      "description": "Get in touch for freelance work, collaborations, or new product ideas."
+    },
+    "project": {
+      "title": "{{project}} | {{siteName}}",
+      "description": "Case study and technical overview of this project."
+    },
+    "keywords": "Khamidov Pakhlavon, Software Engineer, Web Developer, Full Stack, React, Node.js, Databases, Portfolio"
+  },
+  "project": {
+    "notFound": "Project not found",
+    "backToPortfolio": "Back to Portfolio",
+    "viewLiveDemo": "View Live Demo",
+    "viewOnGitHub": "View on GitHub",
+    "technologies": "Technologies",
+    "category": "Category"
+  },
   "about": {
     "title": "About Me",
     "name": "Khamidov Pakhlavon",

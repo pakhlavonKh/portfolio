@@ -10,12 +10,17 @@ const LANGS = [
 
 function getInitialLang() {
   if (typeof window === "undefined") return "en";
+
   const urlLang = new URLSearchParams(window.location.search).get("lang");
   if (urlLang && LANGS.some((l) => l.code === urlLang)) return urlLang;
+
   const stored = localStorage.getItem("app.lang");
   if (stored && LANGS.some((l) => l.code === stored)) return stored;
-  const nav = navigator.language.split("-")[0];
-  if (LANGS.some((l) => l.code === nav)) return nav;
+
+  const preferred = navigator.languages?.map((lang) => lang.split("-")[0]) ?? [];
+  const matched = preferred.find((lang) => LANGS.some((item) => item.code === lang));
+
+  if (matched) return matched;
   return "en";
 }
 
@@ -25,10 +30,11 @@ export default function LanguageSwitcher({ className="" }) {
   const switcherRef = useRef(null);
 
   useEffect(() => {
-    i18next.changeLanguage(lang);
-    localStorage.setItem("app.lang", lang);
-    const meta = LANGS.find((l) => l.code === lang);
-    document.documentElement.setAttribute("lang", lang);
+    const normalized = LANGS.some((l) => l.code === lang) ? lang : "en";
+    i18next.changeLanguage(normalized);
+    localStorage.setItem("app.lang", normalized);
+    const meta = LANGS.find((l) => l.code === normalized);
+    document.documentElement.setAttribute("lang", normalized);
     document.documentElement.setAttribute("dir", meta?.dir || "ltr");
   }, [lang]);
 

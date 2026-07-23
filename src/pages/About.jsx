@@ -1,41 +1,42 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Code, Globe, Server, Cpu, Layers } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function About() {
   const [dot, setDot] = useState({ x: 0, y: 0 });
+  const { t } = useTranslation();
 
   const blocks = [
     {
       icon: <Code size={40} />,
-      title: "Software Engineering",
-      highlight: "Core",
-      text: `Strong foundation in algorithms, OOP and problem solving.
-Experience with Java, Python, JavaScript and C++.`,
+      title: t("about.expertise.software.title"),
+      highlight: t("about.expertise.software.title"),
+      text: t("about.expertise.software.description"),
     },
     {
       icon: <Globe size={40} />,
-      title: "Full Stack",
-      highlight: "Development",
-      text: `Building modern applications with React, Node.js and APIs.`,
+      title: t("about.expertise.fullstack.title"),
+      highlight: t("about.expertise.fullstack.title"),
+      text: t("about.expertise.fullstack.description"),
     },
     {
       icon: <Server size={40} />,
-      title: "Backend",
-      highlight: "Architecture",
-      text: `Designing scalable backend systems and integrations.`,
+      title: t("about.expertise.backend.title"),
+      highlight: t("about.expertise.backend.title"),
+      text: t("about.expertise.backend.description"),
     },
     {
       icon: <Cpu size={40} />,
-      title: "Systems",
-      highlight: "Design",
-      text: `Thinking in systems, structure and data flow.`,
+      title: t("about.expertise.systems.title"),
+      highlight: t("about.expertise.systems.title"),
+      text: t("about.expertise.systems.description"),
     },
     {
       icon: <Layers size={40} />,
-      title: "Applications",
-      highlight: "Development",
-      text: `Building full products from idea to production.`,
+      title: t("about.expertise.applications.title"),
+      highlight: t("about.expertise.applications.title"),
+      text: t("about.expertise.applications.description"),
     },
   ];
 
@@ -44,12 +45,11 @@ Experience with Java, Python, JavaScript and C++.`,
       {/* HERO */}
       <section className="about__hero">
         <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-          About Me
+          {t("about.hero.title")}
         </motion.h1>
 
         <motion.p initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }}>
-          I build complete systems — from interface to architecture —
-          focusing on clarity and scalability.
+          {t("about.hero.description")}
         </motion.p>
       </section>
 
@@ -115,11 +115,8 @@ Experience with Java, Python, JavaScript and C++.`,
 
       {/* APPROACH */}
       <section className="about__approach">
-        <h2>Approach</h2>
-        <p>
-          I approach development as system design — focusing on clarity,
-          structure and long-term maintainability.
-        </p>
+        <h2>{t("about.process.title")}</h2>
+        <p>{t("about.process.step1_desc")}</p>
       </section>
     </main>
   );

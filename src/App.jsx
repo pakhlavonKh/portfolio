@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import Seo from './components/Seo'
 
 // Lazy load route components for code splitting
 const Home = lazy(() => import('./pages/Home'))
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="app-wrapper">
       <Router>
+        <Seo />
         <ScrollToTop />
         <Header />
         <Suspense fallback={<div style={{ minHeight: '100vh', backgroundColor: '#0a0a0a' }} />}>

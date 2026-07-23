@@ -98,6 +98,37 @@
       "error": "✗ Iltimos, barcha majburiy maydonlarni to'ldiring."
     }
   },
+  "seo": {
+    "home": {
+      "title": "{{siteName}} | Dasturiy muhandis va veb dasturchi",
+      "description": "Khamidov Pakhlavon portfeli — zamonaviy full-stack tajribalar yaratadigan dasturiy muhandis va veb dasturchi."
+    },
+    "about": {
+      "title": "{{siteName}} haqida | Dasturiy muhandis va veb dasturchi",
+      "description": "Khamidov Pakhlavonning tajribasi, yondashuvi va mutaxassislik sohalari bilan tanishing."
+    },
+    "portfolio": {
+      "title": "{{siteName}} loyihalari",
+      "description": "React, Node.js, ma'lumotlar bazalari va zamonaviy UI bo'yicha yaratilgan loyihalarni ko'ring."
+    },
+    "contact": {
+      "title": "{{siteName}} bilan bog'lanish",
+      "description": "Freelance ishlari, hamkorlik yoki yangi g'oyalar uchun bog'laning."
+    },
+    "project": {
+      "title": "{{project}} | {{siteName}}",
+      "description": "Loyiha bo'yicha ish va texnik sharh."
+    },
+    "keywords": "Khamidov Pakhlavon, dasturiy muhandis, veb dasturchi, Full Stack, React, Node.js, ma'lumotlar bazalari, portfolio"
+  },
+  "project": {
+    "notFound": "Loyiha topilmadi",
+    "backToPortfolio": "Portfeliya qaytish",
+    "viewLiveDemo": "Demo ko'rish",
+    "viewOnGitHub": "GitHub da ko'rish",
+    "technologies": "Texnologiyalar",
+    "category": "Kategoriya"
+  },
   "about": {
     "title": "Men haqimda",
     "name": "Hamidov Pahlavon",

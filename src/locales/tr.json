@@ -106,6 +106,37 @@
       "error": "✗ Lütfen tüm gerekli alanları doldurun."
     }
   },
+  "seo": {
+    "home": {
+      "title": "{{siteName}} | Yazılım Mühendisi & Web Geliştirici",
+      "description": "Khamidov Pakhlavon’un modern full-stack deneyimleri oluşturan yazılım mühendisi ve web geliştirici portföyü."
+    },
+    "about": {
+      "title": "{{siteName}} Hakkında | Yazılım Mühendisi & Web Geliştirici",
+      "description": "Khamidov Pakhlavon’un geçmişi, yaklaşımı ve uzmanlık alanlarını keşfedin."
+    },
+    "portfolio": {
+      "title": "{{siteName}} Projeleri",
+      "description": "React, Node.js, veritabanları ve modern UI alanındaki projelere göz atın."
+    },
+    "contact": {
+      "title": "{{siteName}} İle İletişime Geçin",
+      "description": "Freelance işler, iş birlikleri veya yeni fikirler için iletişime geçin."
+    },
+    "project": {
+      "title": "{{project}} | {{siteName}}",
+      "description": "Bu projenin vaka çalışması ve teknik özeti."
+    },
+    "keywords": "Khamidov Pakhlavon, Yazılım Mühendisi, Web Geliştirici, Full Stack, React, Node.js, Veritabanları, Portföy"
+  },
+  "project": {
+    "notFound": "Proje bulunamadı",
+    "backToPortfolio": "Portföye Dön",
+    "viewLiveDemo": "Canlı Demo Gör",
+    "viewOnGitHub": "GitHub'ta Görüntüle",
+    "technologies": "Teknolojiler",
+    "category": "Kategori"
+  },
   "about": {
     "title": "Hakkımda",
     "name": "Khamidov Pakhlavon",

@@ -27,7 +27,7 @@ function ProjectDetail() {
   if (!project) {
     return (
       <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Project not found</h1>
+        <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>{t('project.notFound')}</h1>
         <button 
           onClick={() => navigate('/portfolio')}
           style={{
@@ -40,7 +40,7 @@ function ProjectDetail() {
             cursor: 'pointer'
           }}
         >
-          Back to Portfolio
+          {t('project.backToPortfolio')}
         </button>
       </main>
     );
@@ -60,7 +60,7 @@ function ProjectDetail() {
           padding: 0
         }}
       >
-        ← Back to Portfolio
+        ← {t('project.backToPortfolio')}
       </button>
 
       <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '2rem' : '4rem', alignItems: 'start' }}>
@@ -92,7 +92,7 @@ function ProjectDetail() {
                 textAlign: 'center'
               }}
             >
-              View Live Demo <ArrowUpRight style={{ display: 'inline', marginLeft: '0.5rem' }} size={20} />
+              {t('project.viewLiveDemo')} <ArrowUpRight style={{ display: 'inline', marginLeft: '0.5rem' }} size={20} />
             </a>
           )}
           {project.githubLink && (
@@ -116,7 +116,7 @@ function ProjectDetail() {
                 textAlign: 'center'
               }}
             >
-              <Github style={{ display: 'inline', marginRight: '0.5rem' }} size={20} /> View on GitHub
+              <Github style={{ display: 'inline', marginRight: '0.5rem' }} size={20} /> {t('project.viewOnGitHub')}
             </a>
           )}
         </div>
@@ -131,7 +131,7 @@ function ProjectDetail() {
           </p>
 
           <div style={{ marginTop: '2rem' }}>
-            <h3 style={{ fontSize: isMobile ? '1.2rem' : '1.5rem', marginBottom: '1rem', color: 'var(--accent)' }}>Technologies</h3>
+            <h3 style={{ fontSize: isMobile ? '1.2rem' : '1.5rem', marginBottom: '1rem', color: 'var(--accent)' }}>{t('project.technologies')}</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: isMobile ? '0.8rem' : '1rem', justifyContent: isMobile ? 'center' : 'flex-start' }}>
               {project.technologies.map((tech, idx) => (
                 <span
@@ -153,7 +153,7 @@ function ProjectDetail() {
 
           <div style={{ marginTop: '3rem' }}>
             <p style={{ fontSize: isMobile ? '1rem' : '1.3rem', color: '#999' }}>
-              <strong>Category:</strong> {project.category}
+              <strong>{t('project.category')}:</strong> {project.category}
             </p>
           </div>
         </div>
