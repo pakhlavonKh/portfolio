@@ -109,11 +109,11 @@
   "seo": {
     "home": {
       "title": "{{siteName}} | Yazılım Mühendisi & Web Geliştirici",
-      "description": "Khamidov Pakhlavon’un modern full-stack deneyimleri oluşturan yazılım mühendisi ve web geliştirici portföyü."
+      "description": "Pakhlavon Khamidov’un modern full-stack deneyimleri oluşturan yazılım mühendisi ve web geliştirici portföyü."
     },
     "about": {
       "title": "{{siteName}} Hakkında | Yazılım Mühendisi & Web Geliştirici",
-      "description": "Khamidov Pakhlavon’un geçmişi, yaklaşımı ve uzmanlık alanlarını keşfedin."
+      "description": "Pakhlavon Khamidov’un geçmişi, yaklaşımı ve uzmanlık alanlarını keşfedin."
     },
     "portfolio": {
       "title": "{{siteName}} Projeleri",
@@ -127,7 +127,7 @@
       "title": "{{project}} | {{siteName}}",
       "description": "Bu projenin vaka çalışması ve teknik özeti."
     },
-    "keywords": "Khamidov Pakhlavon, Yazılım Mühendisi, Web Geliştirici, Full Stack, React, Node.js, Veritabanları, Portföy"
+    "keywords": "Pakhlavon Khamidov, Yazılım Mühendisi, Web Geliştirici, Full Stack, React, Node.js, Veritabanları, Portföy"
   },
   "project": {
     "notFound": "Proje bulunamadı",
@@ -139,7 +139,7 @@
   },
   "about": {
     "title": "Hakkımda",
-    "name": "Khamidov Pakhlavon",
+    "name": "Pakhlavon Khamidov",
     "hero": {
       "title": "Hakkımda",
       "description": "Arayüzden backend mimarisine kadar tam dijital sistemleri tasarlarım ve geliştiririm — performans, ölçeklenebilirlik ve temiz etkileşime odaklanarak."

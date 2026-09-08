@@ -78,13 +78,16 @@ function Home() {
       <section className="hero" id="hero">
         <AnimatedWireframeBg showParticles={true} />
         <div className="center">
-          <h1 id="name">Khamidov Pakhlavon</h1>
+          <h1 id="name">
+            <span className="hero-name-word">
+              <img src="/assets/p.png" alt="P" className="hero-initial-img hero-initial-p" />akhlavon
+            </span>{" "}
+            <span className="hero-name-word">
+              <img src="/assets/k.png" alt="K" className="hero-initial-img hero-initial-k" />hamidov
+            </span>
+          </h1>
           <h2 id="title">{t("hero__title")}</h2>
         </div>
-
-        <a href="#expertise">
-          <div className="mouse"></div>
-        </a>
       </section>
       <section
         ref={expertiseRef}

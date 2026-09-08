@@ -111,11 +111,11 @@
   "seo": {
     "home": {
       "title": "{{siteName}} | Software Engineer & Web Developer",
-      "description": "Portfolio of Khamidov Pakhlavon — software engineer and web developer crafting modern full-stack experiences."
+      "description": "Portfolio of Pakhlavon Khamidov — software engineer and web developer crafting modern full-stack experiences."
     },
     "about": {
       "title": "About {{siteName}} | Software Engineer & Web Developer",
-      "description": "Learn about Khamidov Pakhlavon’s background, engineering approach, and areas of expertise."
+      "description": "Learn about Pakhlavon Khamidov’s background, engineering approach, and areas of expertise."
     },
     "portfolio": {
       "title": "Projects by {{siteName}}",
@@ -129,7 +129,7 @@
       "title": "{{project}} | {{siteName}}",
       "description": "Case study and technical overview of this project."
     },
-    "keywords": "Khamidov Pakhlavon, Software Engineer, Web Developer, Full Stack, React, Node.js, Databases, Portfolio"
+    "keywords": "Pakhlavon Khamidov, Software Engineer, Web Developer, Full Stack, React, Node.js, Databases, Portfolio"
   },
   "project": {
     "notFound": "Project not found",
@@ -141,7 +141,7 @@
   },
   "about": {
     "title": "About Me",
-    "name": "Khamidov Pakhlavon",
+    "name": "Pakhlavon Khamidov",
     "hero": {
       "title": "About Me",
       "description": "I design and build complete digital systems — from interfaces to backend architecture — focusing on performance, scalability, and clean interaction."

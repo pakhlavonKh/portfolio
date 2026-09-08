@@ -101,11 +101,11 @@
   "seo": {
     "home": {
       "title": "{{siteName}} | Dasturiy muhandis va veb dasturchi",
-      "description": "Khamidov Pakhlavon portfeli — zamonaviy full-stack tajribalar yaratadigan dasturiy muhandis va veb dasturchi."
+      "description": "Pakhlavon Khamidov portfeli — zamonaviy full-stack tajribalar yaratadigan dasturiy muhandis va veb dasturchi."
     },
     "about": {
       "title": "{{siteName}} haqida | Dasturiy muhandis va veb dasturchi",
-      "description": "Khamidov Pakhlavonning tajribasi, yondashuvi va mutaxassislik sohalari bilan tanishing."
+      "description": "Pakhlavon Khamidovning tajribasi, yondashuvi va mutaxassislik sohalari bilan tanishing."
     },
     "portfolio": {
       "title": "{{siteName}} loyihalari",
@@ -119,7 +119,7 @@
       "title": "{{project}} | {{siteName}}",
       "description": "Loyiha bo'yicha ish va texnik sharh."
     },
-    "keywords": "Khamidov Pakhlavon, dasturiy muhandis, veb dasturchi, Full Stack, React, Node.js, ma'lumotlar bazalari, portfolio"
+    "keywords": "Pakhlavon Khamidov, dasturiy muhandis, veb dasturchi, Full Stack, React, Node.js, ma'lumotlar bazalari, portfolio"
   },
   "project": {
     "notFound": "Loyiha topilmadi",
@@ -131,7 +131,7 @@
   },
   "about": {
     "title": "Men haqimda",
-    "name": "Hamidov Pahlavon",
+    "name": "Pakhlavon Khamidov",
     "hero": {
       "title": "Men Haqimda",
       "description": "Men interfeysd­an backend arxitekturasigacha to'liq raqamli tizimlarni loyihalayman va yarataman — ishlash, scalability va toza o'zaro aloqa bilan diqqat qaratib."

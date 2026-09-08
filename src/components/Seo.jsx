@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 
-const SITE_NAME = 'Khamidov Pakhlavon';
+const SITE_NAME = 'Pakhlavon Khamidov';
 const DEFAULT_IMAGE = 'https://pakhlavon.dev/assets/preview.png';
 
 function ensureMetaTag(name, content, attr = 'name') {

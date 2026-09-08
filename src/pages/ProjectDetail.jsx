@@ -31,13 +31,14 @@ function ProjectDetail() {
         <button 
           onClick={() => navigate('/portfolio')}
           style={{
-            padding: '1rem 2rem',
+            padding: '1rem 2.2rem',
             fontSize: '1.5rem',
             border: '2px solid var(--accent)',
             color: 'var(--accent)',
             background: 'transparent',
-            borderRadius: '0.5rem',
-            cursor: 'pointer'
+            borderRadius: '9999px',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease'
           }}
         >
           {t('project.backToPortfolio')}
@@ -78,11 +79,11 @@ function ProjectDetail() {
               style={{
                 display: 'inline-block',
                 marginTop: '2rem',
-                padding: isMobile ? '0.8rem 1.5rem' : '1rem 2rem',
+                padding: isMobile ? '0.8rem 1.8rem' : '1rem 2.4rem',
                 background: 'var(--accent)',
                 color: '#0f172a',
                 textDecoration: 'none',
-                borderRadius: '0.5rem',
+                borderRadius: '9999px',
                 fontWeight: '600',
                 fontSize: isMobile ? '1rem' : '1.2rem',
                 cursor: 'pointer',
@@ -103,12 +104,12 @@ function ProjectDetail() {
               style={{
                 display: 'inline-block',
                 marginTop: isMobile ? '0' : '2rem',
-                padding: isMobile ? '0.8rem 1.5rem' : '1rem 2rem',
+                padding: isMobile ? '0.8rem 1.8rem' : '1rem 2.4rem',
                 background: 'transparent',
                 border: '2px solid var(--accent)',
                 color: 'var(--accent)',
                 textDecoration: 'none',
-                borderRadius: '0.5rem',
+                borderRadius: '9999px',
                 fontWeight: '600',
                 fontSize: isMobile ? '1rem' : '1.2rem',
                 cursor: 'pointer',
@@ -137,10 +138,10 @@ function ProjectDetail() {
                 <span
                   key={idx}
                   style={{
-                    padding: isMobile ? '0.4rem 0.8rem' : '0.5rem 1rem',
+                    padding: isMobile ? '0.4rem 1rem' : '0.5rem 1.2rem',
                     background: 'rgba(100, 255, 218, 0.1)',
                     border: '1px solid var(--accent)',
-                    borderRadius: '0.5rem',
+                    borderRadius: '9999px',
                     color: 'var(--accent)',
                     fontSize: isMobile ? '1rem' : '1.2rem'
                   }}

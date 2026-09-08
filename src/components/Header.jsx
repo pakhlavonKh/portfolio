@@ -40,11 +40,15 @@ function Header() {
   
   return (
     <header className={`header ${isHomePage ? (isFixed ? 'fixed' : '') : 'sticky'}`}>
-      <Link to="/" className="name-wrapper">
-        <span className="first">K</span>
-        <span className="rest hamidov">hamidov</span>
-        <span className="first letter-p">P</span>
+      <Link to="/" className="name-wrapper" aria-label="Pakhlavon Khamidov">
+        <span className="first">
+          <img src="/assets/p.png" alt="P" className="initial-img initial-p" />
+        </span>
         <span className="rest akhlavon">akhlavon</span>
+        <span className="first letter-k">
+          <img src="/assets/k.png" alt="K" className="initial-img initial-k" />
+        </span>
+        <span className="rest hamidov">hamidov</span>
       </Link>
       <input
         type="checkbox"
