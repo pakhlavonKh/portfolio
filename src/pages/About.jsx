@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Code, Globe, Server, Cpu, Layers } from "lucide-react";
+import { Code, Globe, Server, Cpu, Layers, Compass, Layout, Terminal, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 function About() {
@@ -37,6 +37,33 @@ function About() {
       title: t("about.expertise.applications.title"),
       highlight: t("about.expertise.applications.title"),
       text: t("about.expertise.applications.description"),
+    },
+  ];
+
+  const steps = [
+    {
+      num: "01",
+      icon: <Compass size={26} />,
+      title: t("about.process.step1"),
+      text: t("about.process.step1_desc"),
+    },
+    {
+      num: "02",
+      icon: <Layout size={26} />,
+      title: t("about.process.step2"),
+      text: t("about.process.step2_desc"),
+    },
+    {
+      num: "03",
+      icon: <Terminal size={26} />,
+      title: t("about.process.step3"),
+      text: t("about.process.step3_desc"),
+    },
+    {
+      num: "04",
+      icon: <Sparkles size={26} />,
+      title: t("about.process.step4"),
+      text: t("about.process.step4_desc"),
     },
   ];
 
@@ -113,10 +140,38 @@ function About() {
         ))}
       </section>
 
-      {/* APPROACH */}
+      {/* APPROACH / PROCESS */}
       <section className="about__approach">
-        <h2>{t("about.process.title")}</h2>
-        <p>{t("about.process.step1_desc")}</p>
+        <motion.div
+          className="about__approach-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2>{t("about.process.title")}</h2>
+          <span className="about__approach-accent-bar" />
+        </motion.div>
+
+        <div className="about__steps-grid">
+          {steps.map((step, idx) => (
+            <motion.div
+              key={idx}
+              className="about__step-card"
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: idx * 0.1 }}
+            >
+              <div className="about__step-top">
+                <span className="about__step-num">{step.num}</span>
+                <div className="about__step-icon-wrap">{step.icon}</div>
+              </div>
+              <h3 className="about__step-title">{step.title}</h3>
+              <p className="about__step-text">{step.text}</p>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </main>
   );

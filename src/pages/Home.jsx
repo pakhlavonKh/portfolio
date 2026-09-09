@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import BinaryRain from "../components/BinaryRain";
 import { projects } from "../data/projects";
 import { Code, Globe, Server, ArrowUpRight } from "lucide-react";
-import AnimatedWireframeBg from "../components/FlowingLinesBg";
+import DynamicHeroBg from "../components/DynamicHeroBg";
+import TesseractHero from "../components/TesseractHero";
 import LiquidBinaryField from "../components/LiquidBinaryField";
 
 function Home() {
@@ -76,7 +77,8 @@ function Home() {
   return (
     <main>
       <section className="hero" id="hero">
-        <AnimatedWireframeBg showParticles={true} />
+        <DynamicHeroBg />
+        <TesseractHero />
         <div className="center">
           <h1 id="name">
             <span className="hero-name-word">

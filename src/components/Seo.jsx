@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 
 const SITE_NAME = 'Pakhlavon Khamidov';
-const DEFAULT_IMAGE = 'https://pakhlavon.dev/assets/preview.png';
+const DEFAULT_IMAGE = 'https://pakhlavon.dev/assets/og.png';
 
 function ensureMetaTag(name, content, attr = 'name') {
   const selector = `meta[${attr}="${name}"]`;
