@@ -5,8 +5,8 @@ import BinaryRain from "../components/BinaryRain";
 import { projects } from "../data/projects";
 import { Code, Globe, Server, ArrowUpRight } from "lucide-react";
 import DynamicHeroBg from "../components/DynamicHeroBg";
-import TesseractHero from "../components/TesseractHero";
-import LiquidBinaryField from "../components/LiquidBinaryField";
+
+const TesseractHero = React.lazy(() => import("../components/TesseractHero"));
 
 function Home() {
   const expertiseRef = useRef(null);
@@ -16,31 +16,7 @@ function Home() {
     work: false,
   });
   const [randomProjects, setRandomProjects] = useState([]);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const scrollTimeoutRef = useRef(null);
   const { t } = useTranslation();
-
-  // Throttle scroll events to pause animations during scrolling
-  useEffect(() => {
-    let isScrolling = false;
-    
-    const handleScroll = () => {
-      if (!isScrolling) {
-        setIsScrolling(true);
-      }
-      
-      clearTimeout(scrollTimeoutRef.current);
-      scrollTimeoutRef.current = setTimeout(() => {
-        setIsScrolling(false);
-      }, 200); // Increased from 150ms to 200ms
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeoutRef.current);
-    };
-  }, []);
 
   useEffect(() => {
     // Select 3 random projects using Fisher-Yates shuffle
@@ -78,14 +54,16 @@ function Home() {
     <main>
       <section className="hero" id="hero">
         <DynamicHeroBg />
-        <TesseractHero />
+        <React.Suspense fallback={null}>
+          <TesseractHero />
+        </React.Suspense>
         <div className="center">
           <h1 id="name">
             <span className="hero-name-word">
-              <img src="/assets/p.png" alt="P" className="hero-initial-img hero-initial-p" />akhlavon
+              <img src="/assets/p.webp" alt="P" className="hero-initial-img hero-initial-p" />akhlavon
             </span>{" "}
             <span className="hero-name-word">
-              <img src="/assets/k.png" alt="K" className="hero-initial-img hero-initial-k" />hamidov
+              <img src="/assets/k.webp" alt="K" className="hero-initial-img hero-initial-k" />hamidov
             </span>
           </h1>
           <h2 id="title">{t("hero__title")}</h2>
@@ -162,7 +140,7 @@ function Home() {
           }}
         >
           <div style={{ position: "relative", height: "100%", marginTop: "-100px" }}>
-            <BinaryRain paused={isScrolling} />
+            <BinaryRain />
           </div>
         </div>
       </section>
@@ -179,7 +157,7 @@ function Home() {
         {randomProjects.map((project) => (
           <a key={project.id} href={`/project/${project.id}`} className={`work__card work__card--${project.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="work__card-image-wrapper">
-              <img src={project.image} alt={project.imageAlt} className="work__card-image"/>
+              <img src={project.image} alt={project.imageAlt} className="work__card-image" loading="lazy" decoding="async" />
               {project.live && (
                 <div className="work__card-live-badge" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.link, '_blank'); }}>
                   Live <ArrowUpRight size={18} className="live-badge-arrow" />

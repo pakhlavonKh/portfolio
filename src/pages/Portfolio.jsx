@@ -36,7 +36,7 @@ function Portfolio() {
           {projects.map((project) => (
             <a key={project.id} href={`/project/${project.id}`} className={`work__card work__card--${project.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="work__card-image-wrapper">
-                <img src={project.image} alt={project.imageAlt} className="work__card-image" />
+                <img src={project.image} alt={project.imageAlt} className="work__card-image" loading="lazy" decoding="async" />
                 {project.live && (
                   <div className="work__card-live-badge" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.link, '_blank'); }}>
                     Live <ArrowUpRight size={18} className="live-badge-arrow" />

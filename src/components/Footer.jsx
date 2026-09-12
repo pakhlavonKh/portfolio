@@ -1,64 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Github, Send, Phone, Instagram } from "lucide-react";
 
-function MagneticIcon({ children, link, index }) {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const springX = useSpring(x, { stiffness: 300, damping: 20 });
-  const springY = useSpring(y, { stiffness: 300, damping: 20 });
+function MagneticIcon({ children, link }) {
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-
-    const deltaX = e.clientX - centerX;
-    const deltaY = e.clientY - centerY;
-
-    // magnetic strength
-    x.set(deltaX * 0.25);
-    y.set(deltaY * 0.25);
+    setOffset({
+      x: (e.clientX - centerX) * 0.25,
+      y: (e.clientY - centerY) * 0.25,
+    });
   };
 
+  const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
+    setIsHovered(false);
+    setOffset({ x: 0, y: 0 });
   };
 
   return (
-    <motion.a
+    <a
       href={link}
       target="_blank"
       rel="noreferrer"
       className="social"
-      initial={{ opacity: 0, y: 60, scale: 0.5 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{
-        delay: index * 0.12,
-        type: "spring",
-        stiffness: 260,
-        damping: 18,
-      }}
       style={{
-        x: springX,
-        y: springY,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transform: isHovered
+          ? `translate(${offset.x}px, ${offset.y}px) scale(1.25)`
+          : "translate(0px, 0px) scale(1)",
+        transition: isHovered
+          ? "transform 0.1s ease-out"
+          : "transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
       }}
+      onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      whileHover={{
-        scale: 1.35,
-      }}
-      whileTap={{
-        scale: 0.85,
-      }}
     >
       {children}
-    </motion.a>
+    </a>
   );
 }
 

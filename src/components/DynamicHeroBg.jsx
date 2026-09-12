@@ -57,12 +57,15 @@ const DynamicHeroBg = () => {
 
     window.addEventListener("mousemove", onMouseMove, { passive: true });
 
+    let isMobile = false;
+
     // Handle high-DPI retina scaling
     const handleResize = () => {
       if (!canvas) return;
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       width = canvas.parentElement ? canvas.parentElement.clientWidth : window.innerWidth;
       height = canvas.parentElement ? canvas.parentElement.clientHeight : window.innerHeight;
+      isMobile = width < 768;
+      const dpr = isMobile ? 1.0 : Math.min(window.devicePixelRatio || 1, 1.5);
 
       canvas.width = Math.floor(width * dpr);
       canvas.height = Math.floor(height * dpr);
@@ -81,13 +84,45 @@ const DynamicHeroBg = () => {
     window.addEventListener("resize", handleResize);
 
     // Pause rendering loop when off-screen to preserve CPU/battery
+    let isRunning = false;
+    const startAnimation = () => {
+      if (!isRunning && isVisible && !prefersReducedMotion && !document.hidden) {
+        isRunning = true;
+        animationId = requestAnimationFrame(animate);
+      }
+    };
+
+    const stopAnimation = () => {
+      if (isRunning) {
+        isRunning = false;
+        if (animationId) {
+          cancelAnimationFrame(animationId);
+          animationId = null;
+        }
+      }
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         isVisible = entry.isIntersecting;
+        if (isVisible) {
+          startAnimation();
+        } else {
+          stopAnimation();
+        }
       },
       { threshold: 0.05 }
     );
     observer.observe(canvas);
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAnimation();
+      } else if (isVisible) {
+        startAnimation();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     // Multi-period parameters for non-repeating, living motion
     // Different layers cycle over ~18s, ~27s, ~34s, and ~40s
@@ -243,16 +278,17 @@ const DynamicHeroBg = () => {
       // -------------------------------------------------------------
       // 4. THIN WAVE / CONTOUR LINES (Lower Section, Below Text)
       // -------------------------------------------------------------
-      const lineStep = 180; // points per line for buttery-smooth spline
-      const baseSpacing = 9.5; // wider spacing for a larger, bolder ribbon
+      const lineCount = isMobile ? 8 : LINE_COUNT;
+      const lineStep = isMobile ? 80 : 180; // points per line
+      const baseSpacing = isMobile ? 12 : 9.5;
 
       const lineMX = mouse.x * 18;
       const lineMY = mouse.y * 14;
 
-      for (let i = 0; i < LINE_COUNT; i++) {
-        const lineOffset = (i - LINE_COUNT / 2) * baseSpacing;
+      for (let i = 0; i < lineCount; i++) {
+        const lineOffset = (i - lineCount / 2) * baseSpacing;
         const speed = lineSpeeds[i];
-        const lineTime = elapsed * speed * 2.2; // faster, energetic continuous traveling flow
+        const lineTime = elapsed * speed * 2.2;
 
         ctx.beginPath();
 
@@ -332,22 +368,25 @@ const DynamicHeroBg = () => {
     };
 
     const animate = (currentTime) => {
-      if (!prefersReducedMotion && isVisible) {
-        drawFrame(currentTime);
+      if (!isVisible || document.hidden || prefersReducedMotion) {
+        isRunning = false;
+        return;
       }
+      drawFrame(currentTime);
       animationId = requestAnimationFrame(animate);
     };
 
     // Draw initial frame and start loop
     drawFrame(performance.now());
     if (!prefersReducedMotion) {
-      animationId = requestAnimationFrame(animate);
+      startAnimation();
     }
 
     return () => {
-      cancelAnimationFrame(animationId);
+      stopAnimation();
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("resize", handleResize);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       mediaQuery.removeEventListener("change", handleMotionPreferenceChange);
       observer.disconnect();
     };

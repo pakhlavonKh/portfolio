@@ -1,12 +1,12 @@
 import ecolife from '/assets/ecolife.webp';
 import mazzo from '/assets/mazzo.webp';
-import medicare from '/assets/medicare.png';
-import manaku from '/assets/manaku.png';
-import pitstop from '/assets/pitstop.png';
-import modulbino from '/assets/modulbino.png';
-import invito from '/assets/invito.png';
-import leaf from '/assets/leaf.png';
-import english from '/assets/english.png';
+import medicare from '/assets/medicare.webp';
+import manaku from '/assets/manaku.webp';
+import pitstop from '/assets/pitstop.webp';
+import modulbino from '/assets/modulbino.webp';
+import invito from '/assets/invito.webp';
+import leaf from '/assets/leaf.webp';
+import english from '/assets/english.webp';
 
 export const projects = [
   {

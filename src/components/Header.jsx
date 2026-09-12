@@ -28,56 +28,59 @@ function Header() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); 
+    handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isHomePage]);
 
   useEffect(() => {
-    setIsOpen(false); 
+    setIsOpen(false);
   }, [location]);
-  
+
   return (
-    <header className={`header ${isHomePage ? (isFixed ? 'fixed' : '') : 'sticky'}`}>
-      <Link to="/" className="name-wrapper" aria-label="Pakhlavon Khamidov">
-        <span className="first">
-          <img src="/assets/p.png" alt="P" className="initial-img initial-p" />
-        </span>
-        <span className="rest akhlavon">akhlavon</span>
-        <span className="first letter-k">
-          <img src="/assets/k.png" alt="K" className="initial-img initial-k" />
-        </span>
-        <span className="rest hamidov">hamidov</span>
-      </Link>
-      <input
-        type="checkbox"
-        id="nav-toggle"
-        className="navigation__checkbox"
-        checked={isOpen}
-        onChange={() => setIsOpen(!isOpen)}
-      />
-      <label htmlFor="nav-toggle" className="navigation__button">
-        <span className={`navigation__icon ${isOpen ? 'open' : ''}`}>&nbsp;</span>
-      </label>
-      <div className="navigation">
-        <ul className="navigation__list">
+    <>
+      <header className={`header ${isHomePage ? (isFixed ? 'fixed' : '') : 'sticky'}`}>
+        <Link to="/" className="name-wrapper" aria-label="Pakhlavon Khamidov">
+          <span className="first">
+            <img src="/assets/p.webp" alt="P" className="initial-img initial-p" />
+          </span>
+          <span className="rest akhlavon">akhlavon</span>
+          <span className="first letter-k">
+            <img src="/assets/k.webp" alt="K" className="initial-img initial-k" />
+          </span>
+          <span className="rest hamidov">hamidov</span>
+        </Link>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          className="navigation__checkbox"
+          checked={isOpen}
+          onChange={() => setIsOpen(!isOpen)}
+        />
+        <label htmlFor="nav-toggle" className="navigation__button">
+          <span className={`navigation__icon ${isOpen ? 'open' : ''}`}>&nbsp;</span>
+        </label>
+        <div className="navigation">
+          <ul className="navigation__list">
+            <li><Link to="/" onClick={() => setIsOpen(false)}>{t("home")}</Link></li>
+            <li><Link to="/about" onClick={() => setIsOpen(false)}>{t("expertise")}</Link></li>
+            <li><Link to="/portfolio" onClick={() => setIsOpen(false)}>{t("work")}</Link></li>
+            <li><Link to="/contact" onClick={() => setIsOpen(false)}>{t("contacts")}</Link></li>
+          </ul>
+          <LanguageSwitcher className="navigationLang" />
+        </div>
+
+        <ul className={`headerNav ${isHomePage && isFixed ? 'fixed' : ""}`}>
           <li><Link to="/" onClick={() => setIsOpen(false)}>{t("home")}</Link></li>
           <li><Link to="/about" onClick={() => setIsOpen(false)}>{t("expertise")}</Link></li>
           <li><Link to="/portfolio" onClick={() => setIsOpen(false)}>{t("work")}</Link></li>
           <li><Link to="/contact" onClick={() => setIsOpen(false)}>{t("contacts")}</Link></li>
         </ul>
-        <LanguageSwitcher  className="navigationLang"/>
-      </div>
-
-      <ul className={`headerNav ${isHomePage && isFixed ? 'fixed' : ""}`}>
-        <li><Link to="/" onClick={() => setIsOpen(false)}>{t("home")}</Link></li>
-        <li><Link to="/about" onClick={() => setIsOpen(false)}>{t("expertise")}</Link></li>
-        <li><Link to="/portfolio" onClick={() => setIsOpen(false)}>{t("work")}</Link></li>
-        <li><Link to="/contact" onClick={() => setIsOpen(false)}>{t("contacts")}</Link></li>
-      </ul>
-      <LanguageSwitcher />
-    </header>
+        <LanguageSwitcher />
+      </header>
+      {/* {!isHomePage && <div className="header-spacer" aria-hidden="true" />} */}
+    </>
   );
 }
 

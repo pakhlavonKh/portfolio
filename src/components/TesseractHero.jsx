@@ -57,16 +57,17 @@ const TesseractHero = () => {
 
     let width = container.clientWidth || window.innerWidth;
     let height = container.clientHeight || window.innerHeight;
+    const isMobile = width < 768;
 
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
     camera.position.set(0, 0, 14);
 
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
-      antialias: true,
+      antialias: !isMobile,
       powerPreference: "high-performance",
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setPixelRatio(isMobile ? 1.0 : Math.min(window.devicePixelRatio || 1, 1.5));
     renderer.setSize(width, height);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.15;
@@ -83,8 +84,8 @@ const TesseractHero = () => {
       envMapIntensity: 0.9,
     });
 
-    const sphereGeometry = new THREE.SphereGeometry(0.16, 16, 16);
-    const cylinderGeometry = new THREE.CylinderGeometry(0.046, 0.046, 1, 12);
+    const sphereGeometry = new THREE.SphereGeometry(0.16, isMobile ? 8 : 14, isMobile ? 8 : 14);
+    const cylinderGeometry = new THREE.CylinderGeometry(0.046, 0.046, 1, isMobile ? 6 : 10);
     const upVector = new THREE.Vector3(0, 1, 0);
 
     // Tesseract container group
@@ -217,21 +218,56 @@ const TesseractHero = () => {
 
     let animationId = null;
     let isVisible = true;
+    let isRunning = false;
     const startTime = performance.now();
+
+    const startAnimation = () => {
+      if (!isRunning && isVisible && !document.hidden) {
+        isRunning = true;
+        animationId = requestAnimationFrame(render);
+      }
+    };
+
+    const stopAnimation = () => {
+      if (isRunning) {
+        isRunning = false;
+        if (animationId) {
+          cancelAnimationFrame(animationId);
+          animationId = null;
+        }
+      }
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           isVisible = entry.isIntersecting;
+          if (isVisible) {
+            startAnimation();
+          } else {
+            stopAnimation();
+          }
         });
       },
       { threshold: 0.05 }
     );
     observer.observe(container);
 
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAnimation();
+      } else if (isVisible) {
+        startAnimation();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     const render = (time) => {
+      if (!isVisible || document.hidden) {
+        isRunning = false;
+        return;
+      }
       animationId = requestAnimationFrame(render);
-      if (!isVisible) return;
 
       const elapsed = (time - startTime) * 0.001;
 
@@ -340,8 +376,9 @@ const TesseractHero = () => {
 
     // 9. Cleanup
     return () => {
-      if (animationId) cancelAnimationFrame(animationId);
+      stopAnimation();
       observer.disconnect();
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("resize", handleResize);
 
       sphereGeometry.dispose();
