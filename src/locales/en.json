@@ -36,8 +36,8 @@
     "showProject": "Show project",
     "project1": {
       "title": "Eco Life Etiqo'd",
-      "shortDescription": "Wellness resort website with natural spring water and dining services",
-      "description": "Eco-Life Etiqod is a wellness resort website showcasing natural spring water, buffet dining, and a cozy family-friendly atmosphere. It features a responsive multi-page layout with modern design and smooth interactions. Built with HTML, CSS, JavaScript, and React, the project delivers an engaging user experience across all devices."
+      "shortDescription": "Wellness resort platform featuring online room reservations and an admin booking management system",
+      "description": "Eco-Life Etiqod is a wellness resort web platform showcasing natural spring water, dining, and family-friendly recreation. It features direct online room bookings for guests and an administrative management system to oversee reservations and room availability. Built with HTML, CSS, JavaScript, and React, the platform delivers an intuitive, responsive experience across all devices."
     },
     "project2": {
       "title": "Mazzo Premium",
@@ -78,6 +78,11 @@
       "title": "Adaptive English Learning Platform",
       "shortDescription": "AI-driven adaptive platform for personalized English learning",
       "description": "Technical manager for an innovative adaptive learning platform designed to personalize English language education. Implemented AI-driven content adaptation that adjusts difficulty and learning paths based on user performance. Features interactive lessons, progress tracking, and gamified learning elements. Built with React frontend and Node.js backend, serving multiple learning styles and proficiency levels."
+    },
+    "project10": {
+      "title": "ALL WINDOWS",
+      "shortDescription": "Corporate website and product catalog for window, door, and facade systems",
+      "description": "ALL WINDOWS is a modern corporate website and catalog platform for a premier manufacturer of aluminum and PVC window, door, and facade systems in Tashkent. Built with React, TypeScript, and Tailwind CSS, it features an interactive product catalog, service overviews, portfolio showcases, and rapid quotation forms with high performance and SEO optimization."
     }
   },
   "footer": {
@@ -137,7 +142,17 @@
     "viewLiveDemo": "View Live Demo",
     "viewOnGitHub": "View on GitHub",
     "technologies": "Technologies",
-    "category": "Category"
+    "category": "Category",
+    "overview": "Overview",
+    "details": "Project Details",
+    "status": "Status",
+    "liveStatus": "Live Project",
+    "devStatus": "In Development",
+    "platform": "Platform",
+    "webApp": "Web Application",
+    "prevProject": "Previous Project",
+    "nextProject": "Next Project",
+    "visitSite": "Visit Website"
   },
   "about": {
     "title": "About Me",

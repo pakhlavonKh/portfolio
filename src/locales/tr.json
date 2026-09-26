@@ -36,8 +36,8 @@
     "showProject": "Projeyi Görüntüle",
     "project1": {
       "title": "Eco Life Etiqo'd",
-      "shortDescription": "Doğal kaynak suyu ve yemek hizmetleri ile sağlık merkezi web sitesi",
-      "description": "Eco-Life Etiqod, şifalı kaynak suyu, açık büfe yemekler ve sıcak aile ortamını tanıtan bir sağlık tesisi web sitesidir. Modern tasarım ve akıcı animasyonlarla çok sayfalı duyarlı bir düzen sunar. HTML, CSS, JavaScript ve React ile geliştirilmiş olup, tüm cihazlarda keyifli bir kullanıcı deneyimi sağlar."
+      "shortDescription": "Çevrimiçi oda rezervasyonu ve yönetici paneline sahip sağlıklı yaşam tesisi platformu",
+      "description": "Eco-Life Etiqod, şifalı kaynak suyu, açık büfe yemekler ve aile boyu dinlenme imkanlarını sunan bir sağlıklı yaşam tesisi web platformudur. Ziyaretçiler için doğrudan siteden oda rezervasyonu yapma imkanı ve yöneticiler için rezervasyonları ve oda durumunu yönetebilecekleri bir yönetim paneli içerir. HTML, CSS, JavaScript ve React ile geliştirilmiş olup tüm cihazlarda sorunsuz bir kullanıcı deneyimi sunar."
     },
     "project2": {
       "title": "Mazzo Premium",
@@ -78,6 +78,11 @@
       "title": "Adaptive English Learning Platform",
       "shortDescription": "Kişiselleştirilmiş İngilizce öğrenimi için yapay zeka destekli platform",
       "description": "İngilizce dil eğitimini kişiselleştirmek için tasarlanan yenilikçi uyarlamalı öğrenme platformunun teknik yöneticisi. Kullanıcı performansına göre zorluk seviyesini ve öğrenme yollarını ayarlayan yapay zeka tarafından yönlendirilen içerik uyarlamasını uyguladım. Etkileşimli dersler, ilerleme takibi ve oyunlaştırılmış öğrenme öğeleri içerir. React ön ucu ve Node.js arka ucu ile oluşturulmuş, çeşitli öğrenme stilleri ve yeterlilik seviyelerine hizmet vermektedir."
+    },
+    "project10": {
+      "title": "ALL WINDOWS",
+      "shortDescription": "Pencere, kapı ve cephe sistemleri için kurumsal web sitesi ve ürün kataloğu",
+      "description": "ALL WINDOWS, Taşkent'te alüminyum ve PVC pencere, kapı ve cephe sistemleri üreticisi için hazırlanmış modern bir kurumsal web sitesi ve katalog platformudur. React, TypeScript ve Tailwind CSS ile geliştirilmiş olup etkileşimli ürün kataloğu, proje vitrinleri ve hızlı teklif alma formları sunar."
     }
   },
   "footer": {
@@ -132,10 +137,20 @@
   "project": {
     "notFound": "Proje bulunamadı",
     "backToPortfolio": "Portföye Dön",
-    "viewLiveDemo": "Canlı Demo Gör",
+    "viewLiveDemo": "Canlı Önizleme",
     "viewOnGitHub": "GitHub'ta Görüntüle",
     "technologies": "Teknolojiler",
-    "category": "Kategori"
+    "category": "Kategori",
+    "overview": "Genel Bakış",
+    "details": "Proje Detayları",
+    "status": "Durum",
+    "liveStatus": "Yayında",
+    "devStatus": "Geliştirilme Aşamasında",
+    "platform": "Platform",
+    "webApp": "Web Uygulaması",
+    "prevProject": "Önceki Proje",
+    "nextProject": "Sonraki Proje",
+    "visitSite": "Siteyi Ziyaret Et"
   },
   "about": {
     "title": "Hakkımda",

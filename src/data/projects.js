@@ -7,6 +7,7 @@ import modulbino from '/assets/modulbino.webp';
 import invito from '/assets/invito.webp';
 import leaf from '/assets/leaf.webp';
 import english from '/assets/english.webp';
+import allwindows from '/assets/allwindows.webp';
 
 export const projects = [
   {
@@ -20,7 +21,7 @@ export const projects = [
     githubLink: 'https://github.com/pakhlavonKh/ecoLife',
     live: true,
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
-    category: 'Web Design'
+    category: 'Hospitality & Booking'
   },
   {
     id: 2,
@@ -123,5 +124,18 @@ export const projects = [
     live: false,
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
     category: 'Education'
+  },
+  {
+    id: 10,
+    titleKey: 'works.project10.title',
+    descriptionKey: 'works.project10.description',
+    shortDescriptionKey: 'works.project10.shortDescription',
+    image: allwindows,
+    imageAlt: 'project10',
+    link: 'https://allwindows.uz/',
+    githubLink: 'https://github.com/pakhlavonKh/all-windows',
+    live: true,
+    technologies: ['HTML', 'CSS', 'TypeScript', 'React', 'Tailwind CSS'],
+    category: 'Manufacturing & Construction'
   }
 ];

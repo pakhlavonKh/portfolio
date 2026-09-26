@@ -33,7 +33,9 @@
   "works": {
     "title": "Mening",    "titleHighlight": "Ishlarim",    "showProject": "Loyihani ko‘rish",
     "project1": {
-      "title": "Eco Life Etiqo'd",      "shortDescription": "Tabiiy buloq suvi va xizmatlar bilan sog'lomlashtirish kurortining veb-sayti",      "description": "Eco-Life Etiqod — bu sog‘lomlashtirish kurorti veb-sayti bo‘lib, tabiiy buloq suvi, shved stoli va qulay oilaviy muhitni namoyish etadi. U zamonaviy dizayn va silliq animatsiyalarga ega ko‘p sahifali moslashuvchan maket bilan yaratilgan. HTML, CSS, JavaScript va React yordamida qurilgan bo‘lib, barcha qurilmalarda qulay tajriba taqdim etadi."
+      "title": "Eco Life Etiqo'd",
+      "shortDescription": "Onlayn xonalarni bron qilish va administratorlar uchun boshqaruv tizimiga ega sihatgoh veb-platformasi",
+      "description": "Eco-Life Etiqod — bu tabiiy buloq suvi, shved stoli va qulay oilaviy dam olish muhitini taqdim etuvchi sihatgoh veb-platformasi. Saytda mehmonlar uchun to‘g‘ridan-to‘g‘ri xonalarni bron qilish tizimi hamda administratorlar uchun buyurtmalar va xonalarni boshqarish paneli mavjud. HTML, CSS, JavaScript va React yordamida yaratilgan bo‘lib, barcha qurilmalarda tezkor va qulay tajriba beradi."
     },
     "project2": {
       "title": "Mazzo Premium",      "shortDescription": "Premium mahsulotlarning nafis taqdimi bilan premium e-commerce",      "description": "Mazzo Premium — bu nafis vizuallar va qulay navigatsiya bilan premium mahsulotlarni taqdim etuvchi zamonaviy e-commerce sayti. HTML, CSS, JavaScript va React yordamida yaratilgan bo‘lib, foydalanuvchilarga qulay va moslashuvchan tajriba beradi."    },
@@ -69,6 +71,11 @@
       "title": "Adaptive English Learning Platform",
       "shortDescription": "Shaxsiylashtirgan Ingliz tilini o'rganish uchun AI-asosita platforma",
       "description": "Ingliz tilini o'rganishni shaxsiy qilib yaratilgan yangi moslashuvchan o'qish platformasining texnik rahbari. Foydalanuvchi ishlashiga asoslangan yangilangan va o'qish yo'llarini moslashtiruvchi suniy intellekt asosidagi kontent moslashuvini amalga oshirdim. Interaktiv derslarni, taraqqiyot kuzatuvni va o'yin elementlarini o'qishni o'z ichiga oladi. React oldga va Node.js orqasiga yaratilgan, turli o'qish uslublari va savodxonlik darajasiga xizmat ko'rsatildi."
+    },
+    "project10": {
+      "title": "ALL WINDOWS",
+      "shortDescription": "Deraza, eshik va fasad tizimlari ishlab chiqaruvchisining korporativ sayti va katalogi",
+      "description": "ALL WINDOWS — bu Toshkentdagi alyuminiy va PVX derazalar, eshiklar hamda fasad tizimlari ishlab chiqaruvchisi uchun yaratilgan zamonaviy korporativ veb-sayt va katalog platformasi. React, TypeScript va Tailwind CSS texnologiyalarida ishlab chiqilgan bo‘lib, qulay mahsulotlar katalogi, xizmatlar taqdimoti va tezkor buyurtma berish imkoniyatlarini taqdim etadi."
     }
   },
   "footer": {
@@ -123,11 +130,21 @@
   },
   "project": {
     "notFound": "Loyiha topilmadi",
-    "backToPortfolio": "Portfeliya qaytish",
-    "viewLiveDemo": "Demo ko'rish",
-    "viewOnGitHub": "GitHub da ko'rish",
+    "backToPortfolio": "Portfelga qaytish",
+    "viewLiveDemo": "Jonli ko‘rish",
+    "viewOnGitHub": "GitHub-da ko‘rish",
     "technologies": "Texnologiyalar",
-    "category": "Kategoriya"
+    "category": "Kategoriya",
+    "overview": "Loyiha haqida",
+    "details": "Loyiha tafsilotlari",
+    "status": "Holat",
+    "liveStatus": "Faol",
+    "devStatus": "Ishlab chiqilmoqda",
+    "platform": "Platforma",
+    "webApp": "Veb-ilova",
+    "prevProject": "Oldingi loyiha",
+    "nextProject": "Keyingi loyiha",
+    "visitSite": "Saytga o‘tish"
   },
   "about": {
     "title": "Men haqimda",

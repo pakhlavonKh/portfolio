@@ -1,99 +1,127 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { 
+  ArrowLeft, 
+  ArrowUpRight, 
+  Github, 
+  ExternalLink, 
+  Lock, 
+  Sparkles, 
+  Layers, 
+  ChevronLeft, 
+  ChevronRight 
+} from 'lucide-react';
 
 function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768);
 
-  const project = projects.find(p => p.id === parseInt(id));
+  const projectId = parseInt(id, 10);
+  const currentIndex = projects.findIndex(p => p.id === projectId);
+  const project = currentIndex !== -1 ? projects[currentIndex] : null;
+
+  const prevProject = project 
+    ? (currentIndex > 0 ? projects[currentIndex - 1] : projects[projects.length - 1])
+    : null;
+  const nextProject = project
+    ? (currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0])
+    : null;
+
+  const projectNumber = project ? String(project.id).padStart(2, '0') : '';
+  const totalProjects = String(projects.length).padStart(2, '0');
+
+  const cleanUrl = project?.link 
+    ? project.link.replace(/^https?:\/\//, '').replace(/\/$/, '')
+    : 'localhost:3000';
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [id]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   if (!project) {
     return (
-      <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>{t('project.notFound')}</h1>
-        <button 
-          onClick={() => navigate('/portfolio')}
-          style={{
-            padding: '1rem 2.2rem',
-            fontSize: '1.5rem',
-            border: '2px solid var(--accent)',
-            color: 'var(--accent)',
-            background: 'transparent',
-            borderRadius: '9999px',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease'
-          }}
-        >
-          {t('project.backToPortfolio')}
-        </button>
+      <main className="project-detail">
+        <div className="project-detail__not-found">
+          <h1 className="project-detail__not-found-title">{t('project.notFound')}</h1>
+          <button 
+            onClick={() => navigate('/portfolio')}
+            className="project-detail__btn-primary"
+            style={{ cursor: 'pointer', border: 'none' }}
+          >
+            ← {t('project.backToPortfolio')}
+          </button>
+        </div>
       </main>
     );
   }
 
   return (
-    <main style={{ padding: isMobile ? '2rem 1.5rem' : '4rem 2rem', maxWidth: '1200px', margin: '0 auto' }}>
-      <button 
-        onClick={() => navigate('/portfolio')}
-        style={{
-          background: 'transparent',
-          border: 'none',
-          color: 'var(--accent)',
-          fontSize: isMobile ? '1.2rem' : '1.5rem',
-          cursor: 'pointer',
-          marginBottom: '2rem',
-          padding: 0
-        }}
-      >
-        ← {t('project.backToPortfolio')}
-      </button>
+    <main className="project-detail">
+      <div className="project-detail__ambient-glow" aria-hidden="true" />
 
-      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '2rem' : '4rem', alignItems: 'start' }}>
-        <div>
-          <img 
-            src={project.image} 
-            alt={project.imageAlt}
-            style={{ width: '100%', borderRadius: '1.5rem', objectFit: 'cover' }}
-          />
+      {/* Topbar: Back button & Quick switcher */}
+      <div className="project-detail__topbar">
+        <Link to="/portfolio" className="project-detail__back-btn">
+          <ArrowLeft size={16} /> {t('project.backToPortfolio')}
+        </Link>
+
+        <div className="project-detail__switcher">
+          <span className="project-detail__switcher-counter">
+            {projectNumber} / {totalProjects}
+          </span>
+          {prevProject && (
+            <Link 
+              to={`/project/${prevProject.id}`} 
+              className="project-detail__switcher-btn"
+              title={`${t('project.prevProject')}: ${t(prevProject.titleKey)}`}
+              aria-label={t('project.prevProject')}
+            >
+              <ChevronLeft size={16} />
+            </Link>
+          )}
+          {nextProject && (
+            <Link 
+              to={`/project/${nextProject.id}`} 
+              className="project-detail__switcher-btn"
+              title={`${t('project.nextProject')}: ${t(nextProject.titleKey)}`}
+              aria-label={t('project.nextProject')}
+            >
+              <ChevronRight size={16} />
+            </Link>
+          )}
+        </div>
+      </div>
+
+      {/* Header section: Title, Category & Live/Dev Badge, Action Buttons */}
+      <div className="project-detail__header">
+        <div className="project-detail__header-main">
+          <div className="project-detail__badge-strip">
+            <span className="project-detail__category-badge">
+              {project.category}
+            </span>
+            <span className={`project-detail__status-badge ${project.live ? '' : 'project-detail__status-badge--dev'}`}>
+              <span className="project-detail__status-dot" />
+              {project.live ? t('project.liveStatus') : t('project.devStatus')}
+            </span>
+          </div>
+
+          <h1 className="project-detail__title">
+            {t(project.titleKey)}
+          </h1>
+        </div>
+
+        <div className="project-detail__header-actions">
           {project.live && (
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: 'inline-block',
-                marginTop: '2rem',
-                padding: isMobile ? '0.8rem 1.8rem' : '1rem 2.4rem',
-                background: 'var(--accent)',
-                color: '#0f172a',
-                textDecoration: 'none',
-                borderRadius: '9999px',
-                fontWeight: '600',
-                fontSize: isMobile ? '1rem' : '1.2rem',
-                cursor: 'pointer',
-                marginRight: isMobile ? '0' : '1rem',
-                marginBottom: isMobile ? '1rem' : '0',
-                width: isMobile ? '100%' : 'auto',
-                textAlign: 'center'
-              }}
+              className="project-detail__btn-primary"
             >
-              {t('project.viewLiveDemo')} <ArrowUpRight style={{ display: 'inline', marginLeft: '0.5rem' }} size={20} />
+              {t('project.viewLiveDemo')} <ArrowUpRight size={18} />
             </a>
           )}
           {project.githubLink && (
@@ -101,64 +129,117 @@ function ProjectDetail() {
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: 'inline-block',
-                marginTop: isMobile ? '0' : '2rem',
-                padding: isMobile ? '0.8rem 1.8rem' : '1rem 2.4rem',
-                background: 'transparent',
-                border: '2px solid var(--accent)',
-                color: 'var(--accent)',
-                textDecoration: 'none',
-                borderRadius: '9999px',
-                fontWeight: '600',
-                fontSize: isMobile ? '1rem' : '1.2rem',
-                cursor: 'pointer',
-                width: isMobile ? '100%' : 'auto',
-                textAlign: 'center'
-              }}
+              className="project-detail__btn-secondary"
             >
-              <Github style={{ display: 'inline', marginRight: '0.5rem' }} size={20} /> {t('project.viewOnGitHub')}
+              <Github size={18} /> {t('project.viewOnGitHub')}
             </a>
           )}
         </div>
+      </div>
 
+      {/* Main 2-column grid */}
+      <div className="project-detail__grid">
+        {/* Left Column: Browser Mockup Showcase + Specs */}
         <div>
-          <h1 style={{ fontSize: isMobile ? '2rem' : '3rem', marginBottom: '1rem', color: 'var(--accent)' }}>
-            {t(project.titleKey)}
-          </h1>
-          
-          <p style={{ fontSize: isMobile ? '1.2rem' : '1.6rem', lineHeight: '1.8', marginBottom: '2rem', color: '#ccc' }}>
-            {t(project.descriptionKey)}
-          </p>
+          <div className="project-mockup">
+            <div className="project-mockup__header">
+              <div className="project-mockup__dots">
+                <span className="project-mockup__dot project-mockup__dot--red" />
+                <span className="project-mockup__dot project-mockup__dot--yellow" />
+                <span className="project-mockup__dot project-mockup__dot--green" />
+              </div>
+              <div className="project-mockup__address-bar">
+                <Lock size={11} style={{ opacity: 0.7 }} />
+                <span className="project-mockup__url">{cleanUrl}</span>
+              </div>
+              <div className="project-mockup__actions">
+                {project.live && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-mockup__link-icon"
+                    title={t('project.visitSite')}
+                  >
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="project-mockup__screen">
+              <img 
+                src={project.image} 
+                alt={project.imageAlt || t(project.titleKey)}
+                className="project-mockup__img"
+                loading="eager"
+              />
+            </div>
+          </div>
 
-          <div style={{ marginTop: '2rem' }}>
-            <h3 style={{ fontSize: isMobile ? '1.2rem' : '1.5rem', marginBottom: '1rem', color: 'var(--accent)' }}>{t('project.technologies')}</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: isMobile ? '0.8rem' : '1rem', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+          <div className="project-detail__specs-strip">
+            <div className="project-detail__spec-card">
+              <span className="project-detail__spec-label">{t('project.category')}</span>
+              <span className="project-detail__spec-value">{project.category}</span>
+            </div>
+            <div className="project-detail__spec-card">
+              <span className="project-detail__spec-label">{t('project.platform')}</span>
+              <span className="project-detail__spec-value">{t('project.webApp')}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: Deep-dive & Tech Stack */}
+        <div className="project-detail__info-col">
+          <div className="project-detail__card">
+            <h2 className="project-detail__section-title">
+              <Sparkles size={16} /> {t('project.overview')}
+            </h2>
+            <p className="project-detail__description">
+              {t(project.descriptionKey)}
+            </p>
+          </div>
+
+          <div className="project-detail__card">
+            <h2 className="project-detail__section-title">
+              <Layers size={16} /> {t('project.technologies')}
+            </h2>
+            <div className="project-detail__tech-list">
               {project.technologies.map((tech, idx) => (
-                <span
-                  key={idx}
-                  style={{
-                    padding: isMobile ? '0.4rem 1rem' : '0.5rem 1.2rem',
-                    background: 'rgba(100, 255, 218, 0.1)',
-                    border: '1px solid var(--accent)',
-                    borderRadius: '9999px',
-                    color: 'var(--accent)',
-                    fontSize: isMobile ? '1rem' : '1.2rem'
-                  }}
-                >
+                <span key={idx} className="project-detail__tech-pill">
                   {tech}
                 </span>
               ))}
             </div>
           </div>
-
-          <div style={{ marginTop: '3rem' }}>
-            <p style={{ fontSize: isMobile ? '1rem' : '1.3rem', color: '#999' }}>
-              <strong>{t('project.category')}:</strong> {project.category}
-            </p>
-          </div>
         </div>
       </div>
+
+      {/* Bottom Navigation between Projects */}
+      <nav className="project-detail__nav-footer" aria-label="Project Navigation">
+        {prevProject && (
+          <Link to={`/project/${prevProject.id}`} className="project-detail__nav-card project-detail__nav-card--prev">
+            <div className="project-detail__nav-icon">
+              <ChevronLeft size={20} />
+            </div>
+            <div className="project-detail__nav-content">
+              <div className="project-detail__nav-sub">← {t('project.prevProject')}</div>
+              <div className="project-detail__nav-name">{t(prevProject.titleKey)}</div>
+            </div>
+          </Link>
+        )}
+
+        {nextProject && (
+          <Link to={`/project/${nextProject.id}`} className="project-detail__nav-card project-detail__nav-card--next">
+            <div className="project-detail__nav-icon">
+              <ChevronRight size={20} />
+            </div>
+            <div className="project-detail__nav-content">
+              <div className="project-detail__nav-sub">{t('project.nextProject')} →</div>
+              <div className="project-detail__nav-name">{t(nextProject.titleKey)}</div>
+            </div>
+          </Link>
+        )}
+      </nav>
     </main>
   );
 }
