@@ -34,6 +34,7 @@
     "title": "Benim",
     "titleHighlight": "Çalışmalarım",
     "showProject": "Projeyi Görüntüle",
+    "viewAll": "Tüm projeleri görüntüle",
     "project1": {
       "title": "Eco Life Etiqo'd",
       "shortDescription": "Çevrimiçi oda rezervasyonu ve yönetici paneline sahip sağlıklı yaşam tesisi platformu",
@@ -83,6 +84,16 @@
       "title": "ALL WINDOWS",
       "shortDescription": "Pencere, kapı ve cephe sistemleri için kurumsal web sitesi ve ürün kataloğu",
       "description": "ALL WINDOWS, Taşkent'te alüminyum ve PVC pencere, kapı ve cephe sistemleri üreticisi için hazırlanmış modern bir kurumsal web sitesi ve katalog platformudur. React, TypeScript ve Tailwind CSS ile geliştirilmiş olup etkileşimli ürün kataloğu, proje vitrinleri ve hızlı teklif alma formları sunar."
+    },
+    "project11": {
+      "title": "INNOTEK",
+      "shortDescription": "Endüstriyel raf sistemleri ve depo çözümleri üreticisi için kurumsal web sitesi ve katalog",
+      "description": "INNOTEK, Taşkent'te endüstriyel depo raf sistemleri, metal platformlar ve lojistik depolama çözümleri üreten fabrika için hazırlanmış modern bir kurumsal katalog platformudur. Astro, TypeScript ve Tailwind CSS ile geliştirilmiş olup yüksek performans, kapsamlı ürün kataloğu, teknik özellikler ve hızlı çevrim içi fiyat teklifi alma imkanı sunar."
+    },
+    "project12": {
+      "title": "Fashion Autopost",
+      "shortDescription": "Telegram ve Instagram için otonom e-ticaret kazıma ve yapay zeka destekli paylaşım sistemi",
+      "description": "Fashion Autopost, e-ticaret sitelerinden moda ürünlerini otomatik toplayan (scraping), OpenAI GPT ile ilgi çekici içerik metinleri oluşturan, dinamik kâr marjı ve kur dönüşümü hesaplayan ve Telegram kanalları ile Instagram hesaplarında zamanlanmış otomatik paylaşımlar yapan bir arka uç servisi ve yönetici panelidir."
     }
   },
   "footer": {
@@ -107,6 +118,7 @@
       "message": "Mesaj",
       "messagePlaceholder": "Projeniz veya talebiniz hakkında bana söyleyin...",
       "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
       "success": "✓ Mesaj başarıyla gönderildi! Kısa sürede vereceğim.",
       "error": "✗ Lütfen tüm gerekli alanları doldurun."
     }

@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
   const { t } = useTranslation();
@@ -34,7 +35,7 @@ function Portfolio() {
 
         <div className="work__cards">
           {projects.map((project) => (
-            <a key={project.id} href={`/project/${project.id}`} className={`work__card work__card--${project.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link key={project.id} to={`/project/${project.id}`} className={`work__card work__card--${project.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="work__card-image-wrapper">
                 <img src={project.image} alt={project.imageAlt} className="work__card-image" loading="lazy" decoding="async" />
                 {project.live && (
@@ -48,7 +49,7 @@ function Portfolio() {
                   {t(project.descriptionKey)}
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>

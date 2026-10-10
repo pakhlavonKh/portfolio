@@ -32,6 +32,7 @@
   "link": "Loyihani ko‘rish",
   "works": {
     "title": "Mening",    "titleHighlight": "Ishlarim",    "showProject": "Loyihani ko‘rish",
+    "viewAll": "Barcha loyihalarni ko'rish",
     "project1": {
       "title": "Eco Life Etiqo'd",
       "shortDescription": "Onlayn xonalarni bron qilish va administratorlar uchun boshqaruv tizimiga ega sihatgoh veb-platformasi",
@@ -76,6 +77,16 @@
       "title": "ALL WINDOWS",
       "shortDescription": "Deraza, eshik va fasad tizimlari ishlab chiqaruvchisining korporativ sayti va katalogi",
       "description": "ALL WINDOWS — bu Toshkentdagi alyuminiy va PVX derazalar, eshiklar hamda fasad tizimlari ishlab chiqaruvchisi uchun yaratilgan zamonaviy korporativ veb-sayt va katalog platformasi. React, TypeScript va Tailwind CSS texnologiyalarida ishlab chiqilgan bo‘lib, qulay mahsulotlar katalogi, xizmatlar taqdimoti va tezkor buyurtma berish imkoniyatlarini taqdim etadi."
+    },
+    "project11": {
+      "title": "INNOTEK",
+      "shortDescription": "Sanoat stelajlari va ombor saqlash tizimlari ishlab chiqaruvchisining korporativ sayti va katalogi",
+      "description": "INNOTEK — bu Toshkentdagi sanoat ombor stelajlari, metall platformalar va logistika saqlash tizimlari ishlab chiqaruvchisi uchun yaratilgan zamonaviy korporativ katalog platformasi. Astro, TypeScript va Tailwind CSS texnologiyalarida ishlab chiqilgan bo‘lib, yuqori tezlik, boy mahsulotlar katalogi, texnik parametrlar va onlayn hisob-kitob so‘rovlarini taqdim etadi."
+    },
+    "project12": {
+      "title": "Fashion Autopost",
+      "shortDescription": "Telegram va Instagram uchun avtomatlashtirilgan e-tijorat skreyping va AI post tizimi",
+      "description": "Fashion Autopost — bu veb-saytlardan kiyim-kechak mahsulotlarini avtomatik yig‘ib oluvchi (scraping), OpenAI GPT yordamida post matnlarini yaratuvchi, narxlarga ustama va valyuta kurslarini hisoblab chiquvchi hamda Telegram va Instagram sahifalariga belgilangan jadval bo‘yicha avtomatik joylovchi backend xizmati va admin boshqaruv paneli."
     }
   },
   "footer": {
@@ -101,6 +112,7 @@
       "message": "Xabar",
       "messagePlaceholder": "Loyihangiz yoki so'rovingiz haqida menga ayting...",
       "send": "Xabar Yuboring",
+      "sending": "Yuborilmoqda...",
       "success": "✓ Xabar muvaffaqiyatli yuborildi! Tezda javob beraman.",
       "error": "✗ Iltimos, barcha majburiy maydonlarni to'ldiring."
     }

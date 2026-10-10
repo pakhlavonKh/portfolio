@@ -14,10 +14,14 @@ function getInitialLang() {
   const urlLang = new URLSearchParams(window.location.search).get("lang");
   if (urlLang && LANGS.some((l) => l.code === urlLang)) return urlLang;
 
+  const current = (i18next.language || "").toLowerCase().split("-")[0];
+  if (current && LANGS.some((l) => l.code === current)) return current;
+
   const stored = localStorage.getItem("app.lang");
   if (stored && LANGS.some((l) => l.code === stored)) return stored;
 
-  const preferred = navigator.languages?.map((lang) => lang.split("-")[0]) ?? [];
+  const preferred = (navigator.languages || [navigator.language || ""])
+    .map((lang) => lang.toLowerCase().split("-")[0]);
   const matched = preferred.find((lang) => LANGS.some((item) => item.code === lang));
 
   if (matched) return matched;

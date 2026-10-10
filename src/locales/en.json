@@ -34,6 +34,7 @@
     "title": "My",
     "titleHighlight": "Work",
     "showProject": "Show project",
+    "viewAll": "View all projects",
     "project1": {
       "title": "Eco Life Etiqo'd",
       "shortDescription": "Wellness resort platform featuring online room reservations and an admin booking management system",
@@ -83,6 +84,16 @@
       "title": "ALL WINDOWS",
       "shortDescription": "Corporate website and product catalog for window, door, and facade systems",
       "description": "ALL WINDOWS is a modern corporate website and catalog platform for a premier manufacturer of aluminum and PVC window, door, and facade systems in Tashkent. Built with React, TypeScript, and Tailwind CSS, it features an interactive product catalog, service overviews, portfolio showcases, and rapid quotation forms with high performance and SEO optimization."
+    },
+    "project11": {
+      "title": "INNOTEK",
+      "shortDescription": "Corporate website and catalog for industrial storage and racking systems manufacturer",
+      "description": "INNOTEK is a modern corporate catalog platform for a premier manufacturer of industrial warehouse racking, metal platforms, and logistics storage systems in Tashkent. Built with Astro, TypeScript, and Tailwind CSS, the platform delivers high performance, comprehensive product catalogs, technical specifications, and online quotation requests."
+    },
+    "project12": {
+      "title": "Fashion Autopost",
+      "shortDescription": "Autonomous e-commerce scraping and AI publishing system for Telegram and Instagram",
+      "description": "Fashion Autopost is an autonomous backend service and admin dashboard that ingests fashion product listings from e-commerce sites, curates items and generates engaging copywriting using OpenAI GPT, calculates dynamic markups with currency conversion, and automatically publishes posts to Telegram channels and Instagram Business accounts on configurable schedules."
     }
   },
   "footer": {
@@ -109,6 +120,7 @@
       "message": "Message",
       "messagePlaceholder": "Tell me about your project or inquiry...",
       "send": "Send Message",
+      "sending": "Sending...",
       "success": "✓ Message sent successfully! I'll get back to you soon.",
       "error": "✗ Please fill in all required fields."
     }

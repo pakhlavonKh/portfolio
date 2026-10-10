@@ -18,7 +18,14 @@ i18n
       uz: { translation: uz },
       tr: { translation: tr },
     },
+    supportedLngs: ["uz", "ru", "en", "tr"],
     fallbackLng: "en",
+    load: "languageOnly",
+    detection: {
+      order: ["localStorage", "navigator", "htmlTag"],
+      lookupLocalStorage: "app.lang",
+      caches: ["localStorage"],
+    },
     interpolation: { escapeValue: false }
   });
 

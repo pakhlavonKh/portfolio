@@ -8,6 +8,8 @@ import invito from '/assets/invito.webp';
 import leaf from '/assets/leaf.webp';
 import english from '/assets/english.webp';
 import allwindows from '/assets/allwindows.webp';
+import innotek from '/assets/innotek.webp';
+import fashionAutopost from '/assets/fashionAutopost.webp';
 
 export const projects = [
   {
@@ -137,5 +139,29 @@ export const projects = [
     live: true,
     technologies: ['HTML', 'CSS', 'TypeScript', 'React', 'Tailwind CSS'],
     category: 'Manufacturing & Construction'
+  },
+  {
+    id: 11,
+    titleKey: 'works.project11.title',
+    descriptionKey: 'works.project11.description',
+    shortDescriptionKey: 'works.project11.shortDescription',
+    image: innotek,
+    imageAlt: 'project11',
+    link: 'https://innotek.uz/',
+    live: true,
+    technologies: ['HTML', 'CSS', 'TypeScript', 'Astro', 'Tailwind CSS'],
+    category: 'Manufacturing & Logistics'
+  },
+  {
+    id: 12,
+    titleKey: 'works.project12.title',
+    descriptionKey: 'works.project12.description',
+    shortDescriptionKey: 'works.project12.shortDescription',
+    image: fashionAutopost,
+    imageAlt: 'project12',
+    githubLink: 'https://github.com/pakhlavonKh/fashion-autopost',
+    live: false,
+    technologies: ['Python', 'FastAPI', 'Tailwind CSS', 'OpenAI API', 'Telegram API', 'Instagram API'],
+    category: 'E-commerce Automation'
   }
 ];

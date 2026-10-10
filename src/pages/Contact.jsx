@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Mail, Phone, MapPin, Send, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Loader2 } from "lucide-react";
 
 function Contact() {
   const { t } = useTranslation();
@@ -29,6 +29,8 @@ function Contact() {
       return;
     }
 
+    setStatus("sending");
+
     try {
       const res = await fetch("https://script.google.com/macros/s/AKfycbzatTdWnVw2DpPCj1K2TaBv113-JRsfvgoC0Ls32oZDLUoYtQvvB3iBdHicOl9SdrVH/exec", {
         method: "POST",
@@ -43,11 +45,11 @@ function Contact() {
       } else {
         setStatus("error");
       }
-    } catch (err) {
+    } catch {
       setStatus("error");
     }
 
-    setTimeout(() => setStatus(""), 3000);
+    setTimeout(() => setStatus(""), 4000);
   };
 
   return (
@@ -114,8 +116,20 @@ function Contact() {
               <label htmlFor="message">{t("contact.form.message")}</label>
             </div>
 
-            <button type="submit" className="form__button">
-              {t("contact.form.send")} <Send size={20} />
+            <button
+              type="submit"
+              className="form__button"
+              disabled={status === "sending"}
+            >
+              {status === "sending" ? (
+                <>
+                  {t("contact.form.sending")} <Loader2 size={20} className="form__button-spinner" />
+                </>
+              ) : (
+                <>
+                  {t("contact.form.send")} <Send size={20} />
+                </>
+              )}
             </button>
 
             {status === "success" && (
@@ -144,7 +158,7 @@ function Contact() {
               <Phone size={32} className="contact__icon" />
               <div>
                 <h3>{t("contact.phone")}</h3>
-                <a href="tel:+998949941763"> +998 (94) 994 17 63</a>
+                <a href="tel:+998949941763">+998 (94) 994 17 63</a>
               </div>
             </div>
 

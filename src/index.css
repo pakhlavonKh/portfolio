@@ -1695,12 +1695,14 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  text-align: left;
 }
 
 .contact__item {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  text-align: left;
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
 }
@@ -1717,16 +1719,28 @@ canvas {
   animation-delay: 0.5s;
 }
 
+.contact__item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
 .contact__icon {
   color: var(--accent);
   flex-shrink: 0;
   margin-top: 0.3rem;
 }
 
+.contact__item div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
 .contact__item h3 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  text-align: left;
 }
 
 .contact__item a,
@@ -1734,6 +1748,7 @@ canvas {
   font-size: 1.6rem;
   color: var(--text-muted);
   transition: color 0.3s ease;
+  text-align: left;
 }
 
 .contact__item a {
@@ -1781,6 +1796,26 @@ canvas {
   transform: translateY(0);
 }
 
+.form__button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form__button-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .form__message {
   padding: 1.2rem 1.5rem;
   border-radius: 0.8rem;
@@ -1826,22 +1861,30 @@ canvas {
   }
 
   .contact__info {
-    text-align: center;
+    text-align: left;
   }
 
   .contact__item {
     gap: 1.5rem;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact__item div {
+    text-align: left;
+    align-items: flex-start;
   }
 
   .contact__item h3 {
     font-size: 1.6rem;
+    text-align: left;
   }
 
   .contact__item a,
   .contact__item p {
     font-size: 1.4rem;
+    text-align: left;
   }
 
   .form__group input,
